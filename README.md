@@ -18,3 +18,11 @@ Página única, self-contained (HTML + Tailwind CDN + JS inline), com camada de 
 Acesse: **https://inematds.github.io/local-ai-masterclass/**
 
 Feito com o padrão INEMA.CLUB · [inema.club](https://inema.club)
+
+<!-- inema-backlink:v1 -->
+## Mais no INEMA.CLUB
+
+- [Ficha completa deste curso](https://www.inema.club/cursos/187-ia-local-masterclass-ia-na-sua-maquina-soberania-privacidade-e-agentes-24-7/)
+- [Guia: como aprender inteligência artificial](https://www.inema.club/aprender-inteligencia-artificial/)
+- [Todos os cursos](https://www.inema.club/cursos/)
+<!-- /inema-backlink:v1 -->
