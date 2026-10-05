@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="dark">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="inema-course" content="local-ai">
-  <title>1.1 A virada: por que agora | IA Local Masterclass</title>
 
-  <script>
+<html class="dark" lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="local-ai" name="inema-course"/>
+<title>1.1 A virada: por que agora | IA Local Masterclass</title>
+<script>
   (function () {
     try {
       var html = document.documentElement;
@@ -34,15 +34,13 @@
     } catch(err){ try{ document.documentElement.classList.add('dark'); document.documentElement.style.colorScheme='dark'; }catch(e){} }
   })();
   </script>
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
     tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#FACC15', dark: { 900:'#111827',800:'#1f2937',700:'#374151',600:'#4b5563' } } } } }
   </script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../assets/learn.css">
-
-  <script type="application/json" data-inema-manifest>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="../../assets/learn.css" rel="stylesheet"/>
+<script data-inema-manifest="" type="application/json">
   {
     "course": "local-ai",
     "tracks": [
@@ -77,8 +75,7 @@
     ]
   }
   </script>
-
-  <style>
+<style>
     body { font-family: 'Inter', sans-serif; }
     .dark body { background-color: #111827; }
     .topic-explanation { display: none; }
@@ -116,432 +113,390 @@
     .dark .border-dark-600 { border-color: #374151; }
     .dark .divide-dark-600 > :not([hidden]) ~ :not([hidden]) { border-color: #374151; }
   </style>
-</head>
-<body class="bg-dark-900 text-neutral-100 min-h-screen">
-
-  <a href="#conteudo" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[60] focus:px-4 focus:py-2 focus:bg-dark-800 focus:rounded-lg">Pular para o conteúdo</a>
-
-  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-14">
-        <div class="flex items-center space-x-4">
-          <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300">
-            <span class="text-2xl">🖥️</span>
-            <span class="font-bold text-lg hidden sm:inline">IA Local Masterclass</span>
-          </a>
-          <span class="text-neutral-600">|</span>
-          <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
-        </div>
-        <div class="flex items-center space-x-1 sm:space-x-2">
-          <a href="../trilha1/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-emerald-400 bg-emerald-500/10"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentos</span></a>
-          <a href="../trilha2/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Hardware</span></a>
-          <a href="../trilha3/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Instalação</span></a>
-          <a href="../trilha4/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors"><span class="sm:hidden">T4</span><span class="hidden sm:inline">Avançado</span></a>
-          <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2" aria-label="Alternar tema">
-            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-          </button>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4" aria-label="Trilha de navegação">
-    <div class="flex items-center space-x-2 text-sm text-neutral-400">
-      <a href="../../index.html" class="hover:text-emerald-400">Início</a><span>/</span>
-      <a href="index.html" class="hover:text-emerald-400">Fundamentos</a><span>/</span>
-      <span class="text-emerald-400">Módulo 1.1</span>
-    </div>
-  </nav>
-
-  <header class="bg-gradient-to-br from-emerald-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <span class="inline-block px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs font-semibold rounded-full mb-4">MÓDULO 1.1</span>
-      <h1 class="text-3xl sm:text-4xl font-bold mb-4">🌍 A virada: por que agora</h1>
-      <p class="text-lg text-neutral-300 max-w-3xl">O mundo da IA está mudando rápido — e de um jeito que mexe com quem tem acesso ao quê. Este módulo monta o caso do <strong class="text-neutral-100">porquê</strong>: por que IA local deixou de ser hobby de nerd e virou um movimento de soberania, e por que a hora de começar é agora.</p>
-      <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">6</div><div class="text-xs text-neutral-400">Tópicos</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">~35</div><div class="text-xs text-neutral-400">Minutos</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">Básico</div><div class="text-xs text-neutral-400">Nível</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">Teoria</div><div class="text-xs text-neutral-400">Tipo</div></div>
-      </div>
-    </div>
-  </header>
-
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid lg:grid-cols-[230px_1fr] gap-8">
-
-    <!-- TOC -->
-    <aside class="hidden lg:block">
-      <nav data-inema-toc aria-label="Índice da página" class="sticky top-24 self-start">
-        <p class="text-xs text-neutral-400 mb-2 uppercase tracking-wide">Seção <span class="inema-toc-pos" data-inema-section-counter>1</span> de 6</p>
-        <ol class="space-y-1 text-sm">
-          <li><a href="#topico-1" class="inema-toc-link text-neutral-400 hover:text-emerald-400">1. O mundo mudou esta semana</a></li>
-          <li><a href="#topico-2" class="inema-toc-link text-neutral-400 hover:text-emerald-400">2. Hardware escasso e caro</a></li>
-          <li><a href="#topico-3" class="inema-toc-link text-neutral-400 hover:text-emerald-400">3. A saída é a soberania</a></li>
-          <li><a href="#topico-4" class="inema-toc-link text-neutral-400 hover:text-emerald-400">4. O que você ganha</a></li>
-          <li><a href="#topico-5" class="inema-toc-link text-neutral-400 hover:text-emerald-400">5. Mitos que travam</a></li>
-          <li><a href="#topico-6" class="inema-toc-link text-neutral-400 hover:text-emerald-400">6. Seu mapa no curso</a></li>
-        </ol>
-        <div data-inema-meter="modulo:1-1" class="inema-meter mt-6 pt-4 border-t border-dark-600" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso do módulo 1.1">
-          <div class="flex items-center justify-between mb-1"><span class="text-xs text-neutral-400">Módulo</span><span class="text-xs text-emerald-400 font-bold" data-inema-meter-pct>0%</span></div>
-          <div class="inema-bar h-1.5 rounded-full bg-dark-700 overflow-hidden"><div class="inema-bar__fill h-full bg-emerald-500" data-inema-meter-fill style="width:0%"></div></div>
-          <p class="text-[11px] text-neutral-500 mt-1"><span data-inema-meter-frac>0 de 6</span></p>
-        </div>
-      </nav>
-    </aside>
-
-    <main id="conteudo" class="inema-prose min-w-0">
-      <h2 class="text-2xl font-bold mb-6">Conteúdo detalhado</h2>
-
-      <!-- TÓPICO 1 -->
-      <section id="topico-1" data-inema-topic="modulo-1-1#topico-1" data-inema-module="1-1" data-inema-track="1" class="mb-16" style="scroll-margin-top:5rem">
-        <div class="flex items-center space-x-4 mb-6">
-          <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">1</span>
-          <h2 class="text-2xl font-bold">📰 O mundo mudou esta semana</h2>
-        </div>
-        <p class="text-neutral-300 mb-6 leading-relaxed" data-inema-block="m1-1-t1-p1">Não é exagero de manchete: o acesso à inteligência de ponta está virando um <strong class="text-emerald-400">privilégio controlado</strong>. Os modelos mais capazes passam a ser liberados primeiro para grupos selecionados — empresas parceiras, governos, "early access". Quem não está na lista fica para trás justo quando a vantagem de quem está é maior.</p>
-
-        <div class="bg-primary/10 rounded-xl border border-primary/40 p-5 mb-6">
-          <h3 class="text-base font-semibold text-primary mb-2 flex items-center"><span class="mr-2">🆕</span> Novo aqui?</h3>
-          <p class="text-neutral-300 text-sm"><strong>"Modelo de fronteira"</strong> é o LLM mais capaz do momento — o topo de linha (tipo Opus, GPT ou Gemini na versão mais nova). <strong>"LLM"</strong> é o modelo de IA que roda atrás do ChatGPT: na prática, um arquivo gigante de "pesos" + um programa que gera texto a partir dele.</p>
-        </div>
-
-        <div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
-          <h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center"><span class="mr-2">🔑</span> A ideia central</h3>
-          <p class="text-neutral-300 mb-4">Três forças se somam ao mesmo tempo:</p>
-          <ul class="space-y-2 text-neutral-300">
-            <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">•</span><span><strong>Acesso restrito:</strong> os melhores modelos chegam primeiro a poucos.</span></li>
-            <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">•</span><span><strong>Corrida global:</strong> labs do mundo todo (incluindo chineses, como GLM, Qwen e DeepSeek) lançam modelos abertos cada vez mais fortes.</span></li>
-            <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">•</span><span><strong>Dependência:</strong> usar só a nuvem te deixa refém de preço, política e disponibilidade de terceiros.</span></li>
-          </ul>
-        </div>
-
-        <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-          <h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">📊</span> O que observar</h3>
-          <ul class="space-y-2 text-neutral-300 text-sm">
-            <li>Modelos abertos subindo de qualidade mês a mês — a distância para o topo fechado cai.</li>
-            <li>Anúncios de "acesso por convite" e listas de espera para os modelos mais novos.</li>
-            <li>Mais países e empresas lançando os próprios modelos — sinal de que isso virou questão estratégica.</li>
-          </ul>
-        </div>
-
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
-          <div class="bg-dark-800 rounded-lg p-3 border border-dark-600"><div class="text-emerald-400 font-bold text-sm mb-1">Acesso</div><div class="text-xs text-neutral-400">vira privilégio</div></div>
-          <div class="bg-dark-800 rounded-lg p-3 border border-dark-600"><div class="text-emerald-400 font-bold text-sm mb-1">Modelos abertos</div><div class="text-xs text-neutral-400">cada vez mais fortes</div></div>
-          <div class="bg-dark-800 rounded-lg p-3 border border-dark-600"><div class="text-emerald-400 font-bold text-sm mb-1">Nuvem</div><div class="text-xs text-neutral-400">= dependência</div></div>
-          <div class="bg-dark-800 rounded-lg p-3 border border-dark-600"><div class="text-emerald-400 font-bold text-sm mb-1">Reação</div><div class="text-xs text-neutral-400">trazer pra casa</div></div>
-        </div>
-
-        <div class="flex justify-start mt-6">
-          <button type="button" data-inema-read-toggle aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/30 transition-colors">
-            <span class="inema-ico-todo" aria-hidden="true">○</span><span class="inema-ico-done" aria-hidden="true">●</span>
-            <span class="inema-label-todo">Marcar como lido</span><span class="inema-label-done">Lido ✓</span>
-          </button>
-        </div>
-      </section>
-
-      <!-- TÓPICO 2 -->
-      <section id="topico-2" data-inema-topic="modulo-1-1#topico-2" class="mb-16" style="scroll-margin-top:5rem">
-        <div class="flex items-center space-x-4 mb-6">
-          <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">2</span>
-          <h2 class="text-2xl font-bold">💸 Hardware escasso e caro</h2>
-        </div>
-        <p class="text-neutral-300 mb-6 leading-relaxed" data-inema-block="m1-1-t2-p1">O segundo motor da virada é físico: <strong class="text-emerald-400">memória e GPUs estão ficando caras e disputadas</strong>. E a pressão tende a piorar — porque robôs, drones, carros autônomos e data centers de IA vão consumir memória numa escala que ainda nem começou.</p>
-
-        <div class="space-y-6 mb-6">
-          <div class="flex items-start space-x-4">
-            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-emerald-500/20 flex items-center justify-center"><span class="text-emerald-400 font-bold">1</span></div>
-            <div class="flex-1 bg-dark-800 rounded-xl p-5 border border-dark-600">
-              <h4 class="font-semibold text-neutral-100 mb-1">Preço subindo</h4>
-              <p class="text-neutral-300 text-sm">RAM, VRAM e placas de vídeo premium ficaram mais caras — e param menos de subir do que costumavam.</p>
-            </div>
-          </div>
-          <div class="flex items-start space-x-4">
-            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-emerald-500/20 flex items-center justify-center"><span class="text-emerald-400 font-bold">2</span></div>
-            <div class="flex-1 bg-dark-800 rounded-xl p-5 border border-dark-600">
-              <h4 class="font-semibold text-neutral-100 mb-1">Demanda explodindo</h4>
-              <p class="text-neutral-300 text-sm">Cada robô humanoide, drone e carro autônomo precisa de muita memória. Esses produtos mal começaram a ser fabricados — quando escalarem, a fila por memória cresce.</p>
-            </div>
-          </div>
-          <div class="flex items-start space-x-4">
-            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-emerald-500/20 flex items-center justify-center"><span class="text-emerald-400 font-bold">3</span></div>
-            <div class="flex-1 bg-dark-800 rounded-xl p-5 border border-dark-600">
-              <h4 class="font-semibold text-neutral-100 mb-1">A janela de hoje</h4>
-              <p class="text-neutral-300 text-sm">Hardware bom ainda é caro, porém <strong class="text-emerald-400">obtenível</strong>. A aposta da tese: montar seu lab enquanto ainda dá.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-primary/10 rounded-xl border border-primary/40 p-6 mb-6">
-          <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Dica prática</h3>
-          <p class="text-neutral-300 text-sm">Você <strong>não</strong> precisa gastar uma fortuna para entrar. Começar com o computador que já tem é uma estratégia legítima — e nas trilhas 2 e 3 você vê exatamente o que cabe na sua máquina. A urgência é sobre <em>começar</em>, não sobre comprar tudo.</p>
-        </div>
-
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
-          <div class="bg-dark-800 rounded-lg p-3 border border-dark-600"><div class="text-emerald-400 font-bold text-sm mb-1">Memória</div><div class="text-xs text-neutral-400">o recurso disputado</div></div>
-          <div class="bg-dark-800 rounded-lg p-3 border border-dark-600"><div class="text-emerald-400 font-bold text-sm mb-1">Preço</div><div class="text-xs text-neutral-400">tende a subir</div></div>
-          <div class="bg-dark-800 rounded-lg p-3 border border-dark-600"><div class="text-emerald-400 font-bold text-sm mb-1">Janela</div><div class="text-xs text-neutral-400">aberta hoje</div></div>
-          <div class="bg-dark-800 rounded-lg p-3 border border-dark-600"><div class="text-emerald-400 font-bold text-sm mb-1">Estratégia</div><div class="text-xs text-neutral-400">começar já</div></div>
-        </div>
-
-        <div class="flex justify-start mt-6">
-          <button type="button" data-inema-read-toggle aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/30 transition-colors">
-            <span class="inema-ico-todo" aria-hidden="true">○</span><span class="inema-ico-done" aria-hidden="true">●</span>
-            <span class="inema-label-todo">Marcar como lido</span><span class="inema-label-done">Lido ✓</span>
-          </button>
-        </div>
-      </section>
-
-      <!-- TÓPICO 3 -->
-      <section id="topico-3" data-inema-topic="modulo-1-1#topico-3" class="mb-16" style="scroll-margin-top:5rem">
-        <div class="flex items-center space-x-4 mb-6">
-          <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">3</span>
-          <h2 class="text-2xl font-bold">🛡️ A saída é a soberania</h2>
-        </div>
-        <p class="text-neutral-300 mb-6 leading-relaxed" data-inema-block="m1-1-t3-p1">Se o acesso pode ser restrito e o hardware pode ficar inacessível, a resposta é deixar de depender. <strong class="text-emerald-400">Soberania de IA</strong> é simples de definir: a inteligência roda na sua máquina, sob seu controle, e ninguém pode desligar.</p>
-
-        <div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
-          <h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center"><span class="mr-2">🎯</span> O que muda quando é local</h3>
-          <ul class="space-y-2 text-neutral-300">
-            <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">•</span><span>Seus dados não viajam para um servidor de terceiro.</span></li>
-            <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">•</span><span>Ninguém muda o preço, corta o acesso ou bloqueia por região.</span></li>
-            <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">•</span><span>Funciona sem internet — a inteligência mora com você.</span></li>
-          </ul>
-        </div>
-
-        <div class="bg-primary/10 rounded-xl border border-primary/40 p-6 mb-6">
-          <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Dica prática</h3>
-          <p class="text-neutral-300 text-sm">"Soberano" não quer dizer "sozinho contra o mundo". Quer dizer ter uma <strong>base que é sua</strong> e usar a nuvem quando fizer sentido — não por falta de opção. É liberdade de escolher, não dogma.</p>
-        </div>
-
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
-          <div class="bg-dark-800 rounded-lg p-3 border border-dark-600"><div class="text-emerald-400 font-bold text-sm mb-1">Controle</div><div class="text-xs text-neutral-400">é seu</div></div>
-          <div class="bg-dark-800 rounded-lg p-3 border border-dark-600"><div class="text-emerald-400 font-bold text-sm mb-1">Dados</div><div class="text-xs text-neutral-400">ficam em casa</div></div>
-          <div class="bg-dark-800 rounded-lg p-3 border border-dark-600"><div class="text-emerald-400 font-bold text-sm mb-1">Acesso</div><div class="text-xs text-neutral-400">não some</div></div>
-          <div class="bg-dark-800 rounded-lg p-3 border border-dark-600"><div class="text-emerald-400 font-bold text-sm mb-1">Liberdade</div><div class="text-xs text-neutral-400">de escolher</div></div>
-        </div>
-
-        <div class="flex justify-start mt-6">
-          <button type="button" data-inema-read-toggle aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/30 transition-colors">
-            <span class="inema-ico-todo" aria-hidden="true">○</span><span class="inema-ico-done" aria-hidden="true">●</span>
-            <span class="inema-label-todo">Marcar como lido</span><span class="inema-label-done">Lido ✓</span>
-          </button>
-        </div>
-      </section>
-
-      <!-- TÓPICO 4 -->
-      <section id="topico-4" data-inema-topic="modulo-1-1#topico-4" class="mb-16" style="scroll-margin-top:5rem">
-        <div class="flex items-center space-x-4 mb-6">
-          <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">4</span>
-          <h2 class="text-2xl font-bold">🎁 O que você ganha</h2>
-        </div>
-        <p class="text-neutral-300 mb-6 leading-relaxed" data-inema-block="m1-1-t4-p1">Os três pilares da IA local — <strong class="text-emerald-400">privado, ilimitado e não-removível</strong> — não são marketing. Cada um habilita coisas que a nuvem simplesmente não deixa. Compare:</p>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-          <div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6">
-            <h4 class="font-bold text-emerald-400 mb-4">✓ IA local</h4>
-            <ul class="space-y-3 text-neutral-300 text-sm">
-              <li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>Prompts e respostas ficam na sua máquina</span></li>
-              <li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>Uso ilimitado — só paga eletricidade</span></li>
-              <li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>Funciona offline, sem rate limit</span></li>
-              <li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>Não pode ser cortada ou bloqueada</span></li>
-            </ul>
-          </div>
-          <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
-            <h4 class="font-bold text-red-400 mb-4">✗ Só nuvem</h4>
-            <ul class="space-y-3 text-neutral-300 text-sm">
-              <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Seus dados passam por servidores de terceiros</span></li>
-              <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Pedágio por token — caro em escala</span></li>
-              <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Rate limits e quedas fora do seu controle</span></li>
-              <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Preço, política e acesso mudam sem aviso</span></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-          <h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">🔓</span> O ganho que poucos enxergam</h3>
-          <p class="text-neutral-300 text-sm">Por ser ilimitado e sempre ligado, o local destrava casos de uso <strong>impossíveis na nuvem por custo</strong>: agentes rodando 24/7, varreduras contínuas, monitores que nunca dormem. É o tema da Trilha 4 — e a maior surpresa para quem só conhece o chat por assinatura.</p>
-        </div>
-
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
-          <div class="bg-dark-800 rounded-lg p-3 border border-dark-600"><div class="text-emerald-400 font-bold text-sm mb-1">Privado</div><div class="text-xs text-neutral-400">por padrão</div></div>
-          <div class="bg-dark-800 rounded-lg p-3 border border-dark-600"><div class="text-emerald-400 font-bold text-sm mb-1">Ilimitado</div><div class="text-xs text-neutral-400">só eletricidade</div></div>
-          <div class="bg-dark-800 rounded-lg p-3 border border-dark-600"><div class="text-emerald-400 font-bold text-sm mb-1">Sempre-on</div><div class="text-xs text-neutral-400">24/7 possível</div></div>
-          <div class="bg-dark-800 rounded-lg p-3 border border-dark-600"><div class="text-emerald-400 font-bold text-sm mb-1">Resiliente</div><div class="text-xs text-neutral-400">não some</div></div>
-        </div>
-
-        <div class="flex justify-start mt-6">
-          <button type="button" data-inema-read-toggle aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/30 transition-colors">
-            <span class="inema-ico-todo" aria-hidden="true">○</span><span class="inema-ico-done" aria-hidden="true">●</span>
-            <span class="inema-label-todo">Marcar como lido</span><span class="inema-label-done">Lido ✓</span>
-          </button>
-        </div>
-      </section>
-
-      <!-- TÓPICO 5 -->
-      <section id="topico-5" data-inema-topic="modulo-1-1#topico-5" class="mb-16" style="scroll-margin-top:5rem">
-        <div class="flex items-center space-x-4 mb-6">
-          <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">5</span>
-          <h2 class="text-2xl font-bold">🧱 Mitos que travam</h2>
-        </div>
-        <p class="text-neutral-300 mb-6 leading-relaxed" data-inema-block="m1-1-t5-p1">Três crenças param a maioria das pessoas na porta. Vamos desmontar cada uma — porque elas custam a oportunidade de começar.</p>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-          <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
-            <h4 class="font-bold text-red-400 mb-4">✗ O mito</h4>
-            <ul class="space-y-3 text-neutral-300 text-sm">
-              <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>"Preciso gastar uma fortuna em hardware"</span></li>
-              <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>"Modelo local é burro demais pra ser útil"</span></li>
-              <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>"Vai ficar obsoleto em 2 anos"</span></li>
-            </ul>
-          </div>
-          <div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6">
-            <h4 class="font-bold text-emerald-400 mb-4">✓ A realidade</h4>
-            <ul class="space-y-3 text-neutral-300 text-sm">
-              <li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>Dá pra começar com o laptop do armário e um modelo pequeno</span></li>
-              <li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>Para a maioria das tarefas, "bom o suficiente" já chegou</span></li>
-              <li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>Modelos mais eficientes fazem hardware antigo render mais — o ciclo mudou</span></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="bg-primary/10 rounded-xl border border-primary/40 p-6 mb-6">
-          <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Dica prática</h3>
-          <p class="text-neutral-300 text-sm">O melhor jeito de matar um mito é testar. No fim deste módulo você já checa a sua máquina; na Trilha 3 você roda o primeiro modelo em minutos. Experiência vale mais que opinião.</p>
-        </div>
-
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
-          <div class="bg-dark-800 rounded-lg p-3 border border-dark-600"><div class="text-emerald-400 font-bold text-sm mb-1">"Caro"</div><div class="text-xs text-neutral-400">→ comece grátis</div></div>
-          <div class="bg-dark-800 rounded-lg p-3 border border-dark-600"><div class="text-emerald-400 font-bold text-sm mb-1">"Burro"</div><div class="text-xs text-neutral-400">→ bom o bastante</div></div>
-          <div class="bg-dark-800 rounded-lg p-3 border border-dark-600"><div class="text-emerald-400 font-bold text-sm mb-1">"Obsoleto"</div><div class="text-xs text-neutral-400">→ ciclo mudou</div></div>
-          <div class="bg-dark-800 rounded-lg p-3 border border-dark-600"><div class="text-emerald-400 font-bold text-sm mb-1">Antídoto</div><div class="text-xs text-neutral-400">testar você mesmo</div></div>
-        </div>
-
-        <div class="flex justify-start mt-6">
-          <button type="button" data-inema-read-toggle aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/30 transition-colors">
-            <span class="inema-ico-todo" aria-hidden="true">○</span><span class="inema-ico-done" aria-hidden="true">●</span>
-            <span class="inema-label-todo">Marcar como lido</span><span class="inema-label-done">Lido ✓</span>
-          </button>
-        </div>
-      </section>
-
-      <!-- TÓPICO 6 -->
-      <section id="topico-6" data-inema-topic="modulo-1-1#topico-6" class="mb-16" style="scroll-margin-top:5rem">
-        <div class="flex items-center space-x-4 mb-6">
-          <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">6</span>
-          <h2 class="text-2xl font-bold">🗺️ Seu mapa no curso</h2>
-        </div>
-        <p class="text-neutral-300 mb-6 leading-relaxed" data-inema-block="m1-1-t6-p1">As quatro trilhas se somam num caminho único: você sai da teoria e chega a um lab que trabalha por você. Veja como elas se encadeiam:</p>
-
-        <div class="rounded-2xl border border-emerald-500/30 bg-dark-900/40 p-3 sm:p-4 mb-3 overflow-hidden">
-          <svg viewBox="0 0 1000 240" class="w-full h-auto" role="img" aria-label="As quatro trilhas partem de você e convergem num laboratório de IA local que roda agentes 24 por 7">
-            <defs>
-              <linearGradient id="m11-grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#34d399"/><stop offset="1" stop-color="#10b981"/></linearGradient>
-              <filter id="m11-glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="1.8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-              <pattern id="m11-grid" width="32" height="32" patternUnits="userSpaceOnUse"><circle cx="1.3" cy="1.3" r="1.3" fill="#10b981" opacity="0.12"/></pattern>
-              <marker id="m11-ah" markerWidth="9" markerHeight="9" refX="6.5" refY="4.5" orient="auto"><path d="M0,0 L8,4.5 L0,9 L2.4,4.5 Z" fill="#34d399"/></marker>
-              <marker id="m11-ahc" markerWidth="9" markerHeight="9" refX="6.5" refY="4.5" orient="auto"><path d="M0,0 L8,4.5 L0,9 L2.4,4.5 Z" fill="#38bdf8"/></marker>
-            </defs>
-            <rect x="0" y="0" width="1000" height="240" fill="url(#m11-grid)"/>
-            <g fill="none" stroke="#34d399" stroke-width="2" opacity="0.6">
-              <path d="M196,120 C300,120 320,40 452,40" marker-end="url(#m11-ah)"/>
-              <path d="M196,120 C300,120 320,93 452,93" marker-end="url(#m11-ah)"/>
-              <path d="M196,120 C300,120 320,147 452,147" marker-end="url(#m11-ah)"/>
-              <path d="M196,120 C300,120 320,200 452,200" marker-end="url(#m11-ah)"/>
-            </g>
-            <g fill="none" stroke="#38bdf8" stroke-width="2" opacity="0.55">
-              <path d="M624,40  C720,40 740,120 800,120" marker-end="url(#m11-ahc)"/>
-              <path d="M624,93  C720,93 740,120 800,120" marker-end="url(#m11-ahc)"/>
-              <path d="M624,147 C720,147 740,120 800,120" marker-end="url(#m11-ahc)"/>
-              <path d="M624,200 C720,200 740,120 800,120" marker-end="url(#m11-ahc)"/>
-            </g>
-            <g filter="url(#m11-glow)"><rect x="40" y="88" width="156" height="64" rx="14" fill="#0e2018" stroke="url(#m11-grad)" stroke-width="2.5"/></g>
-            <text x="118" y="116" text-anchor="middle" fill="#34d399" font-family="Inter,sans-serif" font-weight="700" font-size="20">Você</text>
-            <text x="118" y="135" text-anchor="middle" fill="#9fe6c8" font-family="Inter,sans-serif" font-size="12">começa aqui</text>
-            <g font-family="Inter,sans-serif" font-size="13" font-weight="600">
-              <g><rect x="452" y="24"  width="172" height="34" rx="9" fill="#0e1b26" stroke="#38bdf8" stroke-width="2"/><text x="538" y="46"  text-anchor="middle" fill="#bfe6ff">T1 · Fundamentos</text></g>
-              <g><rect x="452" y="77"  width="172" height="34" rx="9" fill="#0e1b26" stroke="#38bdf8" stroke-width="2"/><text x="538" y="99"  text-anchor="middle" fill="#bfe6ff">T2 · Hardware</text></g>
-              <g><rect x="452" y="131" width="172" height="34" rx="9" fill="#0e1b26" stroke="#38bdf8" stroke-width="2"/><text x="538" y="153" text-anchor="middle" fill="#bfe6ff">T3 · Instalação</text></g>
-              <g><rect x="452" y="184" width="172" height="34" rx="9" fill="#0e1b26" stroke="#38bdf8" stroke-width="2"/><text x="538" y="206" text-anchor="middle" fill="#bfe6ff">T4 · Agentes 24/7</text></g>
-            </g>
-            <g filter="url(#m11-glow)"><rect x="800" y="84" width="160" height="72" rx="14" fill="#0e2018" stroke="url(#m11-grad)" stroke-width="2.5"/></g>
-            <text x="880" y="116" text-anchor="middle" fill="#34d399" font-family="Inter,sans-serif" font-weight="700" font-size="15">Lab de IA</text>
-            <text x="880" y="136" text-anchor="middle" fill="#34d399" font-family="Inter,sans-serif" font-weight="700" font-size="15">trabalhando</text>
-          </svg>
-        </div>
-        <p class="text-sm text-neutral-400 mb-6">Leia o diagrama da esquerda para a direita: <strong class="text-neutral-200">você</strong> entra pelas quatro trilhas (em ciano), que convergem num <strong class="text-neutral-200">lab que roda sozinho</strong>. Cada trilha é um pré-requisito da próxima.</p>
-
-        <!-- COPY-RUN -->
-        <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
-          <h3 class="text-lg font-semibold text-emerald-400 mb-2 flex items-center"><span class="mr-2">⌨️</span> Exemplo prático: cheque a sua máquina</h3>
-          <p class="text-neutral-400 text-sm mb-3"><strong>Objetivo:</strong> ver quanta memória você tem — o número que decide qual modelo cabe. Cole no terminal.</p>
-          <div class="font-mono text-sm bg-dark-900 rounded-lg p-4 border border-dark-600 text-neutral-200 overflow-x-auto mb-3">
-            <div class="text-neutral-500"># Linux</div>
-            <div>free -h</div>
-            <div class="text-neutral-500 mt-2"># macOS (RAM total)</div>
-            <div>system_profiler SPHardwareDataType | grep "Memory"</div>
-            <div class="text-neutral-500 mt-2"># Windows (PowerShell)</div>
-            <div>systeminfo | findstr /C:"Total Physical Memory"</div>
-          </div>
-          <p class="text-neutral-400 text-sm"><strong>Como verificar:</strong> anote o total de RAM (ex.: 16 GB). Na Trilha 2 você usa esse número para escolher o modelo certo. Se tiver GPU NVIDIA, rode também <span class="font-mono text-emerald-400">nvidia-smi</span> para ver a VRAM.</p>
-        </div>
-
-        <!-- CHECAGEM LEVE -->
-        <div data-inema-check="modulo-1-1#q1" class="inema-check mb-6 bg-dark-800 border border-dark-600 rounded-xl p-6">
-          <p class="font-medium mb-4">Auto-checagem (opcional): qual é o principal motivo, segundo este módulo, para entrar em IA local <em>agora</em>?</p>
-          <div class="inema-check-options space-y-2">
-            <button type="button" data-inema-check-option="0" class="block w-full text-left px-4 py-2 rounded-lg bg-dark-700 border border-dark-600 hover:bg-dark-600 transition-colors text-sm">A) Modelos locais já são mais inteligentes que os de nuvem</button>
-            <button type="button" data-inema-check-option="1" class="block w-full text-left px-4 py-2 rounded-lg bg-dark-700 border border-dark-600 hover:bg-dark-600 transition-colors text-sm">B) Acesso restrito + hardware encarecendo = a janela de soberania está aberta hoje</button>
-            <button type="button" data-inema-check-option="2" class="block w-full text-left px-4 py-2 rounded-lg bg-dark-700 border border-dark-600 hover:bg-dark-600 transition-colors text-sm">C) Porque a nuvem vai deixar de existir</button>
-          </div>
-          <div data-inema-check-feedback class="mt-4 text-sm" role="status" aria-live="polite"></div>
-        </div>
-
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
-          <div class="bg-dark-800 rounded-lg p-3 border border-dark-600"><div class="text-emerald-400 font-bold text-sm mb-1">T1</div><div class="text-xs text-neutral-400">o porquê</div></div>
-          <div class="bg-dark-800 rounded-lg p-3 border border-dark-600"><div class="text-emerald-400 font-bold text-sm mb-1">T2</div><div class="text-xs text-neutral-400">o hardware</div></div>
-          <div class="bg-dark-800 rounded-lg p-3 border border-dark-600"><div class="text-emerald-400 font-bold text-sm mb-1">T3</div><div class="text-xs text-neutral-400">rodar e servir</div></div>
-          <div class="bg-dark-800 rounded-lg p-3 border border-dark-600"><div class="text-emerald-400 font-bold text-sm mb-1">T4</div><div class="text-xs text-neutral-400">agentes 24/7</div></div>
-        </div>
-
-        <div class="flex justify-start mt-6">
-          <button type="button" data-inema-read-toggle aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/30 transition-colors">
-            <span class="inema-ico-todo" aria-hidden="true">○</span><span class="inema-ico-done" aria-hidden="true">●</span>
-            <span class="inema-label-todo">Marcar como lido</span><span class="inema-label-done">Lido ✓</span>
-          </button>
-        </div>
-      </section>
-
-      <!-- RESUMO -->
-      <section class="mb-12">
-        <div class="bg-gradient-to-br from-emerald-900/40 via-dark-800 to-dark-800 rounded-xl border border-emerald-500/30 p-8">
-          <h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">📌</span> Resumo do módulo</h2>
-          <div class="space-y-4 mb-8">
-            <div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">✓</span><div><strong class="text-neutral-100">Acesso vira privilégio</strong><span class="text-neutral-400"> — os melhores modelos chegam primeiro a poucos.</span></div></div>
-            <div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">✓</span><div><strong class="text-neutral-100">Hardware caro, porém obtenível hoje</strong><span class="text-neutral-400"> — a janela está aberta; começar é o que importa.</span></div></div>
-            <div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">✓</span><div><strong class="text-neutral-100">Soberania = controle</strong><span class="text-neutral-400"> — privado, ilimitado e não-removível.</span></div></div>
-            <div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">✓</span><div><strong class="text-neutral-100">Os mitos caem no teste</strong><span class="text-neutral-400"> — dá pra começar grátis, é bom o bastante, o ciclo de hardware mudou.</span></div></div>
-          </div>
-          <div class="bg-dark-800/50 rounded-lg p-4 mb-8">
-            <h3 class="font-semibold text-emerald-400 mb-2">Próximo módulo:</h3>
-            <p class="text-neutral-300">1.2 — O que é IA local de verdade</p>
-          </div>
-          <div class="flex flex-col sm:flex-row gap-4">
-            <a href="index.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">← Voltar para a trilha</a>
-            <a href="modulo-1-2.html" class="flex-1 text-center px-6 py-3 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-500 transition-colors">Próximo módulo →</a>
-          </div>
-        </div>
-      </section>
-    </main>
-  </div>
-
-  <footer class="border-t border-dark-600 py-8 mt-8">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
-      <p>IA Local Masterclass · 2026 · <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300">INEMA.CLUB</a></p>
-    </div>
-  </footer>
-
-  <script>
+<link href="https://inematds.github.io/local-ai-masterclass/curso/trilha1/modulo-1-1.html" hreflang="pt-BR" rel="alternate"/><link href="https://inematds.github.io/local-ai-masterclass/en/curso/trilha1/modulo-1-1.html" hreflang="en" rel="alternate"/><link href="https://inematds.github.io/local-ai-masterclass/es/curso/trilha1/modulo-1-1.html" hreflang="es" rel="alternate"/></head>
+<body class="bg-dark-900 text-neutral-100 min-h-screen"><div class="inema-lang" style="position:fixed;right:14px;bottom:14px;z-index:9999;display:flex;gap:2px;padding:4px;border-radius:10px;background:rgba(12,12,16,.82);border:1px solid rgba(226,162,59,.45);font:600 12px/1 Sora,Inter,system-ui,sans-serif;backdrop-filter:blur(8px)" translate="no"><a href="modulo-1-1.html" hreflang="pt-BR" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#1a1206;background:#E2A23B">PT</a><a href="../../en/curso/trilha1/modulo-1-1.html" hreflang="en" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">EN</a><a href="../../es/curso/trilha1/modulo-1-1.html" hreflang="es" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">ES</a></div>
+<a class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[60] focus:px-4 focus:py-2 focus:bg-dark-800 focus:rounded-lg" href="#conteudo">Pular para o conteúdo</a>
+<nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-14">
+<div class="flex items-center space-x-4">
+<a class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300" href="../../index.html">
+<span class="text-2xl">🖥️</span>
+<span class="font-bold text-lg hidden sm:inline">IA Local Masterclass</span>
+</a>
+<span class="text-neutral-600">|</span>
+<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://inema.club" target="_blank">INEMA.CLUB</a>
+</div>
+<div class="flex items-center space-x-1 sm:space-x-2">
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-emerald-400 bg-emerald-500/10" href="../trilha1/index.html"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentos</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors" href="../trilha2/index.html"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Hardware</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors" href="../trilha3/index.html"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Instalação</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors" href="../trilha4/index.html"><span class="sm:hidden">T4</span><span class="hidden sm:inline">Avançado</span></a>
+<button aria-label="Alternar tema" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2" id="theme-toggle">
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-dark-icon" viewbox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-light-icon" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd"></path></svg>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<nav aria-label="Trilha de navegação" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+<div class="flex items-center space-x-2 text-sm text-neutral-400">
+<a class="hover:text-emerald-400" href="../../index.html">Início</a><span>/</span>
+<a class="hover:text-emerald-400" href="index.html">Fundamentos</a><span>/</span>
+<span class="text-emerald-400">Módulo 1.1</span>
+</div>
+</nav>
+<header class="bg-gradient-to-br from-emerald-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<span class="inline-block px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs font-semibold rounded-full mb-4">MÓDULO 1.1</span>
+<h1 class="text-3xl sm:text-4xl font-bold mb-4">🌍 A virada: por que agora</h1>
+<p class="text-lg text-neutral-300 max-w-3xl">O mundo da IA está mudando rápido — e de um jeito que mexe com quem tem acesso ao quê. Este módulo monta o caso do <strong class="text-neutral-100">porquê</strong>: por que IA local deixou de ser hobby de nerd e virou um movimento de soberania, e por que a hora de começar é agora.</p>
+<div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">6</div><div class="text-xs text-neutral-400">Tópicos</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">~35</div><div class="text-xs text-neutral-400">Minutos</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">Básico</div><div class="text-xs text-neutral-400">Nível</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">Teoria</div><div class="text-xs text-neutral-400">Tipo</div></div>
+</div>
+</div>
+</header>
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid lg:grid-cols-[230px_1fr] gap-8">
+<!-- TOC -->
+<aside class="hidden lg:block">
+<nav aria-label="Índice da página" class="sticky top-24 self-start" data-inema-toc="">
+<p class="text-xs text-neutral-400 mb-2 uppercase tracking-wide">Seção <span class="inema-toc-pos" data-inema-section-counter="">1</span> de 6</p>
+<ol class="space-y-1 text-sm">
+<li><a class="inema-toc-link text-neutral-400 hover:text-emerald-400" href="#topico-1">1. O mundo mudou esta semana</a></li>
+<li><a class="inema-toc-link text-neutral-400 hover:text-emerald-400" href="#topico-2">2. Hardware escasso e caro</a></li>
+<li><a class="inema-toc-link text-neutral-400 hover:text-emerald-400" href="#topico-3">3. A saída é a soberania</a></li>
+<li><a class="inema-toc-link text-neutral-400 hover:text-emerald-400" href="#topico-4">4. O que você ganha</a></li>
+<li><a class="inema-toc-link text-neutral-400 hover:text-emerald-400" href="#topico-5">5. Mitos que travam</a></li>
+<li><a class="inema-toc-link text-neutral-400 hover:text-emerald-400" href="#topico-6">6. Seu mapa no curso</a></li>
+</ol>
+<div aria-label="Progresso do módulo 1.1" aria-valuemax="100" aria-valuemin="0" class="inema-meter mt-6 pt-4 border-t border-dark-600" data-inema-meter="modulo:1-1" role="progressbar">
+<div class="flex items-center justify-between mb-1"><span class="text-xs text-neutral-400">Módulo</span><span class="text-xs text-emerald-400 font-bold" data-inema-meter-pct="">0%</span></div>
+<div class="inema-bar h-1.5 rounded-full bg-dark-700 overflow-hidden"><div class="inema-bar__fill h-full bg-emerald-500" data-inema-meter-fill="" style="width:0%"></div></div>
+<p class="text-[11px] text-neutral-500 mt-1"><span data-inema-meter-frac="">0 de 6</span></p>
+</div>
+</nav>
+</aside>
+<main class="inema-prose min-w-0" id="conteudo">
+<h2 class="text-2xl font-bold mb-6">Conteúdo detalhado</h2>
+<!-- TÓPICO 1 -->
+<section class="mb-16" data-inema-module="1-1" data-inema-topic="modulo-1-1#topico-1" data-inema-track="1" id="topico-1" style="scroll-margin-top:5rem">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">1</span>
+<h2 class="text-2xl font-bold">📰 O mundo mudou esta semana</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed" data-inema-block="m1-1-t1-p1">Não é exagero de manchete: o acesso à inteligência de ponta está virando um <strong class="text-emerald-400">privilégio controlado</strong>. Os modelos mais capazes passam a ser liberados primeiro para grupos selecionados — empresas parceiras, governos, "early access". Quem não está na lista fica para trás justo quando a vantagem de quem está é maior.</p>
+<div class="bg-primary/10 rounded-xl border border-primary/40 p-5 mb-6">
+<h3 class="text-base font-semibold text-primary mb-2 flex items-center"><span class="mr-2">🆕</span> Novo aqui?</h3>
+<p class="text-neutral-300 text-sm"><strong>"Modelo de fronteira"</strong> é o LLM mais capaz do momento — o topo de linha (tipo Opus, GPT ou Gemini na versão mais nova). <strong>"LLM"</strong> é o modelo de IA que roda atrás do ChatGPT: na prática, um arquivo gigante de "pesos" + um programa que gera texto a partir dele.</p>
+</div>
+<div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center"><span class="mr-2">🔑</span> A ideia central</h3>
+<p class="text-neutral-300 mb-4">Três forças se somam ao mesmo tempo:</p>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">•</span><span><strong>Acesso restrito:</strong> os melhores modelos chegam primeiro a poucos.</span></li>
+<li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">•</span><span><strong>Corrida global:</strong> labs do mundo todo (incluindo chineses, como GLM, Qwen e DeepSeek) lançam modelos abertos cada vez mais fortes.</span></li>
+<li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">•</span><span><strong>Dependência:</strong> usar só a nuvem te deixa refém de preço, política e disponibilidade de terceiros.</span></li>
+</ul>
+</div>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">📊</span> O que observar</h3>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li>Modelos abertos subindo de qualidade mês a mês — a distância para o topo fechado cai.</li>
+<li>Anúncios de "acesso por convite" e listas de espera para os modelos mais novos.</li>
+<li>Mais países e empresas lançando os próprios modelos — sinal de que isso virou questão estratégica.</li>
+</ul>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
+<div class="bg-dark-800 rounded-lg p-3 border border-dark-600"><div class="text-emerald-400 font-bold text-sm mb-1">Acesso</div><div class="text-xs text-neutral-400">vira privilégio</div></div>
+<div class="bg-dark-800 rounded-lg p-3 border border-dark-600"><div class="text-emerald-400 font-bold text-sm mb-1">Modelos abertos</div><div class="text-xs text-neutral-400">cada vez mais fortes</div></div>
+<div class="bg-dark-800 rounded-lg p-3 border border-dark-600"><div class="text-emerald-400 font-bold text-sm mb-1">Nuvem</div><div class="text-xs text-neutral-400">= dependência</div></div>
+<div class="bg-dark-800 rounded-lg p-3 border border-dark-600"><div class="text-emerald-400 font-bold text-sm mb-1">Reação</div><div class="text-xs text-neutral-400">trazer pra casa</div></div>
+</div>
+<div class="flex justify-start mt-6">
+<button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/30 transition-colors" data-inema-read-toggle="" type="button">
+<span aria-hidden="true" class="inema-ico-todo">○</span><span aria-hidden="true" class="inema-ico-done">●</span>
+<span class="inema-label-todo">Marcar como lido</span><span class="inema-label-done">Lido ✓</span>
+</button>
+</div>
+</section>
+<!-- TÓPICO 2 -->
+<section class="mb-16" data-inema-topic="modulo-1-1#topico-2" id="topico-2" style="scroll-margin-top:5rem">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">2</span>
+<h2 class="text-2xl font-bold">💸 Hardware escasso e caro</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed" data-inema-block="m1-1-t2-p1">O segundo motor da virada é físico: <strong class="text-emerald-400">memória e GPUs estão ficando caras e disputadas</strong>. E a pressão tende a piorar — porque robôs, drones, carros autônomos e data centers de IA vão consumir memória numa escala que ainda nem começou.</p>
+<div class="space-y-6 mb-6">
+<div class="flex items-start space-x-4">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-emerald-500/20 flex items-center justify-center"><span class="text-emerald-400 font-bold">1</span></div>
+<div class="flex-1 bg-dark-800 rounded-xl p-5 border border-dark-600">
+<h4 class="font-semibold text-neutral-100 mb-1">Preço subindo</h4>
+<p class="text-neutral-300 text-sm">RAM, VRAM e placas de vídeo premium ficaram mais caras — e param menos de subir do que costumavam.</p>
+</div>
+</div>
+<div class="flex items-start space-x-4">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-emerald-500/20 flex items-center justify-center"><span class="text-emerald-400 font-bold">2</span></div>
+<div class="flex-1 bg-dark-800 rounded-xl p-5 border border-dark-600">
+<h4 class="font-semibold text-neutral-100 mb-1">Demanda explodindo</h4>
+<p class="text-neutral-300 text-sm">Cada robô humanoide, drone e carro autônomo precisa de muita memória. Esses produtos mal começaram a ser fabricados — quando escalarem, a fila por memória cresce.</p>
+</div>
+</div>
+<div class="flex items-start space-x-4">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-emerald-500/20 flex items-center justify-center"><span class="text-emerald-400 font-bold">3</span></div>
+<div class="flex-1 bg-dark-800 rounded-xl p-5 border border-dark-600">
+<h4 class="font-semibold text-neutral-100 mb-1">A janela de hoje</h4>
+<p class="text-neutral-300 text-sm">Hardware bom ainda é caro, porém <strong class="text-emerald-400">obtenível</strong>. A aposta da tese: montar seu lab enquanto ainda dá.</p>
+</div>
+</div>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/40 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Dica prática</h3>
+<p class="text-neutral-300 text-sm">Você <strong>não</strong> precisa gastar uma fortuna para entrar. Começar com o computador que já tem é uma estratégia legítima — e nas trilhas 2 e 3 você vê exatamente o que cabe na sua máquina. A urgência é sobre <em>começar</em>, não sobre comprar tudo.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
+<div class="bg-dark-800 rounded-lg p-3 border border-dark-600"><div class="text-emerald-400 font-bold text-sm mb-1">Memória</div><div class="text-xs text-neutral-400">o recurso disputado</div></div>
+<div class="bg-dark-800 rounded-lg p-3 border border-dark-600"><div class="text-emerald-400 font-bold text-sm mb-1">Preço</div><div class="text-xs text-neutral-400">tende a subir</div></div>
+<div class="bg-dark-800 rounded-lg p-3 border border-dark-600"><div class="text-emerald-400 font-bold text-sm mb-1">Janela</div><div class="text-xs text-neutral-400">aberta hoje</div></div>
+<div class="bg-dark-800 rounded-lg p-3 border border-dark-600"><div class="text-emerald-400 font-bold text-sm mb-1">Estratégia</div><div class="text-xs text-neutral-400">começar já</div></div>
+</div>
+<div class="flex justify-start mt-6">
+<button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/30 transition-colors" data-inema-read-toggle="" type="button">
+<span aria-hidden="true" class="inema-ico-todo">○</span><span aria-hidden="true" class="inema-ico-done">●</span>
+<span class="inema-label-todo">Marcar como lido</span><span class="inema-label-done">Lido ✓</span>
+</button>
+</div>
+</section>
+<!-- TÓPICO 3 -->
+<section class="mb-16" data-inema-topic="modulo-1-1#topico-3" id="topico-3" style="scroll-margin-top:5rem">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">3</span>
+<h2 class="text-2xl font-bold">🛡️ A saída é a soberania</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed" data-inema-block="m1-1-t3-p1">Se o acesso pode ser restrito e o hardware pode ficar inacessível, a resposta é deixar de depender. <strong class="text-emerald-400">Soberania de IA</strong> é simples de definir: a inteligência roda na sua máquina, sob seu controle, e ninguém pode desligar.</p>
+<div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center"><span class="mr-2">🎯</span> O que muda quando é local</h3>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">•</span><span>Seus dados não viajam para um servidor de terceiro.</span></li>
+<li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">•</span><span>Ninguém muda o preço, corta o acesso ou bloqueia por região.</span></li>
+<li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">•</span><span>Funciona sem internet — a inteligência mora com você.</span></li>
+</ul>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/40 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Dica prática</h3>
+<p class="text-neutral-300 text-sm">"Soberano" não quer dizer "sozinho contra o mundo". Quer dizer ter uma <strong>base que é sua</strong> e usar a nuvem quando fizer sentido — não por falta de opção. É liberdade de escolher, não dogma.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
+<div class="bg-dark-800 rounded-lg p-3 border border-dark-600"><div class="text-emerald-400 font-bold text-sm mb-1">Controle</div><div class="text-xs text-neutral-400">é seu</div></div>
+<div class="bg-dark-800 rounded-lg p-3 border border-dark-600"><div class="text-emerald-400 font-bold text-sm mb-1">Dados</div><div class="text-xs text-neutral-400">ficam em casa</div></div>
+<div class="bg-dark-800 rounded-lg p-3 border border-dark-600"><div class="text-emerald-400 font-bold text-sm mb-1">Acesso</div><div class="text-xs text-neutral-400">não some</div></div>
+<div class="bg-dark-800 rounded-lg p-3 border border-dark-600"><div class="text-emerald-400 font-bold text-sm mb-1">Liberdade</div><div class="text-xs text-neutral-400">de escolher</div></div>
+</div>
+<div class="flex justify-start mt-6">
+<button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/30 transition-colors" data-inema-read-toggle="" type="button">
+<span aria-hidden="true" class="inema-ico-todo">○</span><span aria-hidden="true" class="inema-ico-done">●</span>
+<span class="inema-label-todo">Marcar como lido</span><span class="inema-label-done">Lido ✓</span>
+</button>
+</div>
+</section>
+<!-- TÓPICO 4 -->
+<section class="mb-16" data-inema-topic="modulo-1-1#topico-4" id="topico-4" style="scroll-margin-top:5rem">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">4</span>
+<h2 class="text-2xl font-bold">🎁 O que você ganha</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed" data-inema-block="m1-1-t4-p1">Os três pilares da IA local — <strong class="text-emerald-400">privado, ilimitado e não-removível</strong> — não são marketing. Cada um habilita coisas que a nuvem simplesmente não deixa. Compare:</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6">
+<h4 class="font-bold text-emerald-400 mb-4">✓ IA local</h4>
+<ul class="space-y-3 text-neutral-300 text-sm">
+<li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>Prompts e respostas ficam na sua máquina</span></li>
+<li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>Uso ilimitado — só paga eletricidade</span></li>
+<li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>Funciona offline, sem rate limit</span></li>
+<li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>Não pode ser cortada ou bloqueada</span></li>
+</ul>
+</div>
+<div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
+<h4 class="font-bold text-red-400 mb-4">✗ Só nuvem</h4>
+<ul class="space-y-3 text-neutral-300 text-sm">
+<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Seus dados passam por servidores de terceiros</span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Pedágio por token — caro em escala</span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Rate limits e quedas fora do seu controle</span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Preço, política e acesso mudam sem aviso</span></li>
+</ul>
+</div>
+</div>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">🔓</span> O ganho que poucos enxergam</h3>
+<p class="text-neutral-300 text-sm">Por ser ilimitado e sempre ligado, o local destrava casos de uso <strong>impossíveis na nuvem por custo</strong>: agentes rodando 24/7, varreduras contínuas, monitores que nunca dormem. É o tema da Trilha 4 — e a maior surpresa para quem só conhece o chat por assinatura.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
+<div class="bg-dark-800 rounded-lg p-3 border border-dark-600"><div class="text-emerald-400 font-bold text-sm mb-1">Privado</div><div class="text-xs text-neutral-400">por padrão</div></div>
+<div class="bg-dark-800 rounded-lg p-3 border border-dark-600"><div class="text-emerald-400 font-bold text-sm mb-1">Ilimitado</div><div class="text-xs text-neutral-400">só eletricidade</div></div>
+<div class="bg-dark-800 rounded-lg p-3 border border-dark-600"><div class="text-emerald-400 font-bold text-sm mb-1">Sempre-on</div><div class="text-xs text-neutral-400">24/7 possível</div></div>
+<div class="bg-dark-800 rounded-lg p-3 border border-dark-600"><div class="text-emerald-400 font-bold text-sm mb-1">Resiliente</div><div class="text-xs text-neutral-400">não some</div></div>
+</div>
+<div class="flex justify-start mt-6">
+<button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/30 transition-colors" data-inema-read-toggle="" type="button">
+<span aria-hidden="true" class="inema-ico-todo">○</span><span aria-hidden="true" class="inema-ico-done">●</span>
+<span class="inema-label-todo">Marcar como lido</span><span class="inema-label-done">Lido ✓</span>
+</button>
+</div>
+</section>
+<!-- TÓPICO 5 -->
+<section class="mb-16" data-inema-topic="modulo-1-1#topico-5" id="topico-5" style="scroll-margin-top:5rem">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">5</span>
+<h2 class="text-2xl font-bold">🧱 Mitos que travam</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed" data-inema-block="m1-1-t5-p1">Três crenças param a maioria das pessoas na porta. Vamos desmontar cada uma — porque elas custam a oportunidade de começar.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
+<h4 class="font-bold text-red-400 mb-4">✗ O mito</h4>
+<ul class="space-y-3 text-neutral-300 text-sm">
+<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>"Preciso gastar uma fortuna em hardware"</span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>"Modelo local é burro demais pra ser útil"</span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>"Vai ficar obsoleto em 2 anos"</span></li>
+</ul>
+</div>
+<div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6">
+<h4 class="font-bold text-emerald-400 mb-4">✓ A realidade</h4>
+<ul class="space-y-3 text-neutral-300 text-sm">
+<li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>Dá pra começar com o laptop do armário e um modelo pequeno</span></li>
+<li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>Para a maioria das tarefas, "bom o suficiente" já chegou</span></li>
+<li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>Modelos mais eficientes fazem hardware antigo render mais — o ciclo mudou</span></li>
+</ul>
+</div>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/40 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Dica prática</h3>
+<p class="text-neutral-300 text-sm">O melhor jeito de matar um mito é testar. No fim deste módulo você já checa a sua máquina; na Trilha 3 você roda o primeiro modelo em minutos. Experiência vale mais que opinião.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
+<div class="bg-dark-800 rounded-lg p-3 border border-dark-600"><div class="text-emerald-400 font-bold text-sm mb-1">"Caro"</div><div class="text-xs text-neutral-400">→ comece grátis</div></div>
+<div class="bg-dark-800 rounded-lg p-3 border border-dark-600"><div class="text-emerald-400 font-bold text-sm mb-1">"Burro"</div><div class="text-xs text-neutral-400">→ bom o bastante</div></div>
+<div class="bg-dark-800 rounded-lg p-3 border border-dark-600"><div class="text-emerald-400 font-bold text-sm mb-1">"Obsoleto"</div><div class="text-xs text-neutral-400">→ ciclo mudou</div></div>
+<div class="bg-dark-800 rounded-lg p-3 border border-dark-600"><div class="text-emerald-400 font-bold text-sm mb-1">Antídoto</div><div class="text-xs text-neutral-400">testar você mesmo</div></div>
+</div>
+<div class="flex justify-start mt-6">
+<button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/30 transition-colors" data-inema-read-toggle="" type="button">
+<span aria-hidden="true" class="inema-ico-todo">○</span><span aria-hidden="true" class="inema-ico-done">●</span>
+<span class="inema-label-todo">Marcar como lido</span><span class="inema-label-done">Lido ✓</span>
+</button>
+</div>
+</section>
+<!-- TÓPICO 6 -->
+<section class="mb-16" data-inema-topic="modulo-1-1#topico-6" id="topico-6" style="scroll-margin-top:5rem">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">6</span>
+<h2 class="text-2xl font-bold">🗺️ Seu mapa no curso</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed" data-inema-block="m1-1-t6-p1">As quatro trilhas se somam num caminho único: você sai da teoria e chega a um lab que trabalha por você. Veja como elas se encadeiam:</p>
+<div class="rounded-2xl border border-emerald-500/30 bg-dark-900/40 p-3 sm:p-4 mb-3 overflow-hidden">
+<svg aria-label="As quatro trilhas partem de você e convergem num laboratório de IA local que roda agentes 24 por 7" class="w-full h-auto" role="img" viewbox="0 0 1000 240">
+<defs>
+<lineargradient id="m11-grad" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#34d399"></stop><stop offset="1" stop-color="#10b981"></stop></lineargradient>
+<filter height="180%" id="m11-glow" width="180%" x="-40%" y="-40%"><fegaussianblur result="b" stddeviation="1.8"></fegaussianblur><femerge><femergenode in="b"></femergenode><femergenode in="SourceGraphic"></femergenode></femerge></filter>
+<pattern height="32" id="m11-grid" patternunits="userSpaceOnUse" width="32"><circle cx="1.3" cy="1.3" fill="#10b981" opacity="0.12" r="1.3"></circle></pattern>
+<marker id="m11-ah" markerheight="9" markerwidth="9" orient="auto" refx="6.5" refy="4.5"><path d="M0,0 L8,4.5 L0,9 L2.4,4.5 Z" fill="#34d399"></path></marker>
+<marker id="m11-ahc" markerheight="9" markerwidth="9" orient="auto" refx="6.5" refy="4.5"><path d="M0,0 L8,4.5 L0,9 L2.4,4.5 Z" fill="#38bdf8"></path></marker>
+</defs>
+<rect fill="url(#m11-grid)" height="240" width="1000" x="0" y="0"></rect>
+<g fill="none" opacity="0.6" stroke="#34d399" stroke-width="2">
+<path d="M196,120 C300,120 320,40 452,40" marker-end="url(#m11-ah)"></path>
+<path d="M196,120 C300,120 320,93 452,93" marker-end="url(#m11-ah)"></path>
+<path d="M196,120 C300,120 320,147 452,147" marker-end="url(#m11-ah)"></path>
+<path d="M196,120 C300,120 320,200 452,200" marker-end="url(#m11-ah)"></path>
+</g>
+<g fill="none" opacity="0.55" stroke="#38bdf8" stroke-width="2">
+<path d="M624,40  C720,40 740,120 800,120" marker-end="url(#m11-ahc)"></path>
+<path d="M624,93  C720,93 740,120 800,120" marker-end="url(#m11-ahc)"></path>
+<path d="M624,147 C720,147 740,120 800,120" marker-end="url(#m11-ahc)"></path>
+<path d="M624,200 C720,200 740,120 800,120" marker-end="url(#m11-ahc)"></path>
+</g>
+<g filter="url(#m11-glow)"><rect fill="#0e2018" height="64" rx="14" stroke="url(#m11-grad)" stroke-width="2.5" width="156" x="40" y="88"></rect></g>
+<text fill="#34d399" font-family="Inter,sans-serif" font-size="20" font-weight="700" text-anchor="middle" x="118" y="116">Você</text>
+<text fill="#9fe6c8" font-family="Inter,sans-serif" font-size="12" text-anchor="middle" x="118" y="135">começa aqui</text>
+<g font-family="Inter,sans-serif" font-size="13" font-weight="600">
+<g><rect fill="#0e1b26" height="34" rx="9" stroke="#38bdf8" stroke-width="2" width="172" x="452" y="24"></rect><text fill="#bfe6ff" text-anchor="middle" x="538" y="46">T1 · Fundamentos</text></g>
+<g><rect fill="#0e1b26" height="34" rx="9" stroke="#38bdf8" stroke-width="2" width="172" x="452" y="77"></rect><text fill="#bfe6ff" text-anchor="middle" x="538" y="99">T2 · Hardware</text></g>
+<g><rect fill="#0e1b26" height="34" rx="9" stroke="#38bdf8" stroke-width="2" width="172" x="452" y="131"></rect><text fill="#bfe6ff" text-anchor="middle" x="538" y="153">T3 · Instalação</text></g>
+<g><rect fill="#0e1b26" height="34" rx="9" stroke="#38bdf8" stroke-width="2" width="172" x="452" y="184"></rect><text fill="#bfe6ff" text-anchor="middle" x="538" y="206">T4 · Agentes 24/7</text></g>
+</g>
+<g filter="url(#m11-glow)"><rect fill="#0e2018" height="72" rx="14" stroke="url(#m11-grad)" stroke-width="2.5" width="160" x="800" y="84"></rect></g>
+<text fill="#34d399" font-family="Inter,sans-serif" font-size="15" font-weight="700" text-anchor="middle" x="880" y="116">Lab de IA</text>
+<text fill="#34d399" font-family="Inter,sans-serif" font-size="15" font-weight="700" text-anchor="middle" x="880" y="136">trabalhando</text>
+</svg>
+</div>
+<p class="text-sm text-neutral-400 mb-6">Leia o diagrama da esquerda para a direita: <strong class="text-neutral-200">você</strong> entra pelas quatro trilhas (em ciano), que convergem num <strong class="text-neutral-200">lab que roda sozinho</strong>. Cada trilha é um pré-requisito da próxima.</p>
+<!-- COPY-RUN -->
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
+<h3 class="text-lg font-semibold text-emerald-400 mb-2 flex items-center"><span class="mr-2">⌨️</span> Exemplo prático: cheque a sua máquina</h3>
+<p class="text-neutral-400 text-sm mb-3"><strong>Objetivo:</strong> ver quanta memória você tem — o número que decide qual modelo cabe. Cole no terminal.</p>
+<div class="font-mono text-sm bg-dark-900 rounded-lg p-4 border border-dark-600 text-neutral-200 overflow-x-auto mb-3">
+<div class="text-neutral-500"># Linux</div>
+<div>free -h</div>
+<div class="text-neutral-500 mt-2"># macOS (RAM total)</div>
+<div>system_profiler SPHardwareDataType | grep "Memory"</div>
+<div class="text-neutral-500 mt-2"># Windows (PowerShell)</div>
+<div>systeminfo | findstr /C:"Total Physical Memory"</div>
+</div>
+<p class="text-neutral-400 text-sm"><strong>Como verificar:</strong> anote o total de RAM (ex.: 16 GB). Na Trilha 2 você usa esse número para escolher o modelo certo. Se tiver GPU NVIDIA, rode também <span class="font-mono text-emerald-400">nvidia-smi</span> para ver a VRAM.</p>
+</div>
+<!-- CHECAGEM LEVE -->
+<div class="inema-check mb-6 bg-dark-800 border border-dark-600 rounded-xl p-6" data-inema-check="modulo-1-1#q1">
+<p class="font-medium mb-4">Auto-checagem (opcional): qual é o principal motivo, segundo este módulo, para entrar em IA local <em>agora</em>?</p>
+<div class="inema-check-options space-y-2">
+<button class="block w-full text-left px-4 py-2 rounded-lg bg-dark-700 border border-dark-600 hover:bg-dark-600 transition-colors text-sm" data-inema-check-option="0" type="button">A) Modelos locais já são mais inteligentes que os de nuvem</button>
+<button class="block w-full text-left px-4 py-2 rounded-lg bg-dark-700 border border-dark-600 hover:bg-dark-600 transition-colors text-sm" data-inema-check-option="1" type="button">B) Acesso restrito + hardware encarecendo = a janela de soberania está aberta hoje</button>
+<button class="block w-full text-left px-4 py-2 rounded-lg bg-dark-700 border border-dark-600 hover:bg-dark-600 transition-colors text-sm" data-inema-check-option="2" type="button">C) Porque a nuvem vai deixar de existir</button>
+</div>
+<div aria-live="polite" class="mt-4 text-sm" data-inema-check-feedback="" role="status"></div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
+<div class="bg-dark-800 rounded-lg p-3 border border-dark-600"><div class="text-emerald-400 font-bold text-sm mb-1">T1</div><div class="text-xs text-neutral-400">o porquê</div></div>
+<div class="bg-dark-800 rounded-lg p-3 border border-dark-600"><div class="text-emerald-400 font-bold text-sm mb-1">T2</div><div class="text-xs text-neutral-400">o hardware</div></div>
+<div class="bg-dark-800 rounded-lg p-3 border border-dark-600"><div class="text-emerald-400 font-bold text-sm mb-1">T3</div><div class="text-xs text-neutral-400">rodar e servir</div></div>
+<div class="bg-dark-800 rounded-lg p-3 border border-dark-600"><div class="text-emerald-400 font-bold text-sm mb-1">T4</div><div class="text-xs text-neutral-400">agentes 24/7</div></div>
+</div>
+<div class="flex justify-start mt-6">
+<button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/30 transition-colors" data-inema-read-toggle="" type="button">
+<span aria-hidden="true" class="inema-ico-todo">○</span><span aria-hidden="true" class="inema-ico-done">●</span>
+<span class="inema-label-todo">Marcar como lido</span><span class="inema-label-done">Lido ✓</span>
+</button>
+</div>
+</section>
+<!-- RESUMO -->
+<section class="mb-12">
+<div class="bg-gradient-to-br from-emerald-900/40 via-dark-800 to-dark-800 rounded-xl border border-emerald-500/30 p-8">
+<h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">📌</span> Resumo do módulo</h2>
+<div class="space-y-4 mb-8">
+<div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">✓</span><div><strong class="text-neutral-100">Acesso vira privilégio</strong><span class="text-neutral-400"> — os melhores modelos chegam primeiro a poucos.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">✓</span><div><strong class="text-neutral-100">Hardware caro, porém obtenível hoje</strong><span class="text-neutral-400"> — a janela está aberta; começar é o que importa.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">✓</span><div><strong class="text-neutral-100">Soberania = controle</strong><span class="text-neutral-400"> — privado, ilimitado e não-removível.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">✓</span><div><strong class="text-neutral-100">Os mitos caem no teste</strong><span class="text-neutral-400"> — dá pra começar grátis, é bom o bastante, o ciclo de hardware mudou.</span></div></div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-4 mb-8">
+<h3 class="font-semibold text-emerald-400 mb-2">Próximo módulo:</h3>
+<p class="text-neutral-300">1.2 — O que é IA local de verdade</p>
+</div>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="index.html">← Voltar para a trilha</a>
+<a class="flex-1 text-center px-6 py-3 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-500 transition-colors" href="modulo-1-2.html">Próximo módulo →</a>
+</div>
+</div>
+</section>
+</main>
+</div>
+<footer class="border-t border-dark-600 py-8 mt-8">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
+<p>IA Local Masterclass · 2026 · <a class="text-sky-400 hover:text-sky-300" href="https://inema.club" target="_blank">INEMA.CLUB</a></p>
+</div>
+</footer>
+<script>
     function toggleTopic(button){const t=button.closest('.topic-item');const e=t.querySelector('.topic-explanation');const c=button.closest('.bg-dark-800');if(c){c.querySelectorAll('.topic-explanation.active').forEach(x=>{if(x!==e)x.classList.remove('active')})}e.classList.toggle('active');const ex=e.classList.contains('active');button.setAttribute('aria-expanded',ex?'true':'false')}
     const themeToggle=document.getElementById('theme-toggle');const di=document.getElementById('theme-toggle-dark-icon');const li=document.getElementById('theme-toggle-light-icon');const root=document.documentElement;
     function syncIcons(){if(root.classList.contains('dark')){li.classList.remove('hidden');di.classList.add('hidden')}else{di.classList.remove('hidden');li.classList.add('hidden')}}
@@ -551,8 +506,8 @@
     function closeModal(){document.querySelectorAll('.modal').forEach(m=>m.classList.add('hidden'));document.body.style.overflow='auto'}
     document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
   </script>
-  <script src="../../assets/learn.js"></script>
-  <script>
+<script src="../../assets/learn.js"></script>
+<script>
     document.addEventListener('DOMContentLoaded',function(){
       if(window.INEMA&&typeof INEMA.init==='function'){
         INEMA.init();

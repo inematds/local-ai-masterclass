@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="dark">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="inema-course" content="local-ai">
-  <title>Trilha 1 · Fundamentos | IA Local Masterclass</title>
 
-  <script>
+<html class="dark" lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="local-ai" name="inema-course"/>
+<title>Trilha 1 · Fundamentos | IA Local Masterclass</title>
+<script>
   (function () {
     try {
       var html = document.documentElement;
@@ -34,15 +34,13 @@
     } catch(err){ try{ document.documentElement.classList.add('dark'); document.documentElement.style.colorScheme='dark'; }catch(e){} }
   })();
   </script>
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
     tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#FACC15', dark: { 900:'#111827',800:'#1f2937',700:'#374151',600:'#4b5563' } } } } }
   </script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../assets/learn.css">
-
-  <script type="application/json" data-inema-manifest>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="../../assets/learn.css" rel="stylesheet"/>
+<script data-inema-manifest="" type="application/json">
   {
     "course": "local-ai",
     "tracks": [
@@ -77,8 +75,7 @@
     ]
   }
   </script>
-
-  <style>
+<style>
     body { font-family: 'Inter', sans-serif; }
     .dark body { background-color: #111827; }
     .topic-explanation { display: none; }
@@ -118,285 +115,269 @@
     .dark .border-dark-600 { border-color: #374151; }
     .dark .divide-dark-600 > :not([hidden]) ~ :not([hidden]) { border-color: #374151; }
   </style>
-</head>
-<body class="bg-dark-900 text-neutral-100 min-h-screen">
-
-  <a href="#conteudo" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[60] focus:px-4 focus:py-2 focus:bg-dark-800 focus:rounded-lg">Pular para o conteúdo</a>
-
-  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-14">
-        <div class="flex items-center space-x-4">
-          <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300">
-            <span class="text-2xl">🖥️</span><span class="font-bold text-lg hidden sm:inline">IA Local Masterclass</span>
-          </a>
-          <span class="text-neutral-600">|</span>
-          <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
-        </div>
-        <div class="flex items-center space-x-1 sm:space-x-2">
-          <a href="index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-emerald-400 bg-emerald-500/10"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentos</span></a>
-          <a href="../trilha2/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Hardware</span></a>
-          <a href="../trilha3/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Instalação</span></a>
-          <a href="../trilha4/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors"><span class="sm:hidden">T4</span><span class="hidden sm:inline">Avançado</span></a>
-          <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2" aria-label="Alternar tema">
-            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-          </button>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <main id="conteudo">
-  <header class="bg-gradient-to-br from-emerald-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <span class="inline-block px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs font-semibold rounded-full mb-4">TRILHA 1</span>
-      <h1 class="text-3xl sm:text-4xl font-bold mb-4">🧭 Fundamentos</h1>
-      <p class="text-lg text-neutral-300 max-w-3xl mb-6">Antes de instalar nada, entenda o terreno: por que IA local virou movimento de soberania, o que ela é de verdade, por que o "burro e lento" é cada vez menos verdade, e como um LLM funciona por dentro. É a base que faz o resto fazer sentido.</p>
-
-      <div class="rounded-2xl border border-emerald-500/30 bg-dark-900/40 p-3 sm:p-4 mb-8 overflow-hidden max-w-3xl">
-        <svg viewBox="0 0 1000 200" class="w-full h-auto" role="img" aria-label="Os quatro módulos de fundamentos formam uma escada: por que, o que é, mitos e anatomia">
-          <defs>
-            <linearGradient id="t1h-grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#34d399"/><stop offset="1" stop-color="#10b981"/></linearGradient>
-            <filter id="t1h-glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="1.8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-            <pattern id="t1h-grid" width="32" height="32" patternUnits="userSpaceOnUse"><circle cx="1.3" cy="1.3" r="1.3" fill="#10b981" opacity="0.12"/></pattern>
-          </defs>
-          <rect x="0" y="0" width="1000" height="200" fill="url(#t1h-grid)"/>
-          <path d="M120,150 L880,60" stroke="#34d399" stroke-width="1.8" stroke-dasharray="9 9" opacity="0.5" fill="none"/>
-          <g font-family="Inter,sans-serif" font-weight="600" font-size="13">
-            <g><rect x="40" y="130" width="170" height="42" rx="10" fill="#0e2018" stroke="#34d399" stroke-width="2"/><text x="125" y="156" text-anchor="middle" fill="#34d399">1.1 Por que agora</text></g>
-            <g><rect x="280" y="100" width="170" height="42" rx="10" fill="#0e2018" stroke="#34d399" stroke-width="2"/><text x="365" y="126" text-anchor="middle" fill="#34d399">1.2 O que é</text></g>
-            <g><rect x="520" y="70" width="170" height="42" rx="10" fill="#0e2018" stroke="#34d399" stroke-width="2"/><text x="605" y="96" text-anchor="middle" fill="#34d399">1.3 Burro/lento?</text></g>
-            <g filter="url(#t1h-glow)"><rect x="760" y="40" width="180" height="42" rx="10" fill="#0e2018" stroke="url(#t1h-grad)" stroke-width="2.5"/><text x="850" y="66" text-anchor="middle" fill="#34d399">1.4 Anatomia</text></g>
-          </g>
-        </svg>
-      </div>
-
-      <div class="grid grid-cols-4 gap-4 max-w-2xl">
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">4</div><div class="text-xs text-neutral-400">Módulos</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">24</div><div class="text-xs text-neutral-400">Tópicos</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">~2h</div><div class="text-xs text-neutral-400">Duração</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">Básico</div><div class="text-xs text-neutral-400">Nível</div></div>
-      </div>
-    </div>
-  </header>
-
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-
-    <!-- MAPA DA TRILHA -->
-    <section class="mb-12">
-      <h2 class="text-2xl font-bold mb-6">Mapa da trilha</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <a href="#modulo-1-1" class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-emerald-500/30 p-5 transition-all">
-          <div class="flex items-center justify-between mb-2"><span class="text-emerald-400 font-bold text-sm">1.1</span><span class="text-xs text-neutral-500">~35 min</span></div>
-          <h3 class="font-semibold mb-1 group-hover:text-emerald-400 transition-colors">🌍 A virada</h3>
-          <p class="text-xs text-neutral-400">A janela está aberta hoje</p>
-        </a>
-        <a href="#modulo-1-2" class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-emerald-500/30 p-5 transition-all">
-          <div class="flex items-center justify-between mb-2"><span class="text-emerald-400 font-bold text-sm">1.2</span><span class="text-xs text-neutral-500">~30 min</span></div>
-          <h3 class="font-semibold mb-1 group-hover:text-emerald-400 transition-colors">🏠 O que é local</h3>
-          <p class="text-xs text-neutral-400">Roda na sua máquina</p>
-        </a>
-        <a href="#modulo-1-3" class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-emerald-500/30 p-5 transition-all">
-          <div class="flex items-center justify-between mb-2"><span class="text-emerald-400 font-bold text-sm">1.3</span><span class="text-xs text-neutral-500">~30 min</span></div>
-          <h3 class="font-semibold mb-1 group-hover:text-emerald-400 transition-colors">🐘 Burro e lento?</h3>
-          <p class="text-xs text-neutral-400">Cada vez menos verdade</p>
-        </a>
-        <a href="#modulo-1-4" class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-emerald-500/30 p-5 transition-all">
-          <div class="flex items-center justify-between mb-2"><span class="text-emerald-400 font-bold text-sm">1.4</span><span class="text-xs text-neutral-500">~40 min</span></div>
-          <h3 class="font-semibold mb-1 group-hover:text-emerald-400 transition-colors">🧬 Anatomia do LLM</h3>
-          <p class="text-xs text-neutral-400">Pesos, tokens, quantização</p>
-        </a>
-      </div>
-    </section>
-
-    <h2 class="text-2xl font-bold mb-6">Conteúdo detalhado</h2>
-
-    <!-- MÓDULO 1.1 -->
-    <div id="modulo-1-1" class="bg-dark-800 rounded-xl border border-dark-600 mb-6" style="scroll-margin-top:5rem">
-      <div class="p-6 border-b border-dark-600">
-        <div class="flex items-center justify-between mb-2"><span class="text-emerald-400 font-bold">1.1</span><span class="text-xs text-neutral-500">~35 min</span></div>
-        <h3 class="text-2xl font-bold mb-2">🌍 A virada: por que agora</h3>
-        <p class="text-neutral-400 text-sm">O caso do "porquê": acesso restrito, hardware encarecendo e a soberania como saída.</p>
-      </div>
-      <div class="divide-y divide-dark-600">
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" aria-expanded="false" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
-            <span class="text-lg">📰</span><div><span class="font-medium">O mundo mudou esta semana</span><span class="text-neutral-500 text-sm ml-2">- Acesso vira privilégio</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-            <div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Os modelos de fronteira chegam primeiro a grupos selecionados, enquanto labs do mundo todo aceleram.</p></div>
-            <div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Entender a corrida explica por que depender só da nuvem é arriscado.</p></div>
-            <div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Modelo de fronteira, acesso restrito, modelos abertos.</p></div>
-          </div></div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" aria-expanded="false" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
-            <span class="text-lg">💸</span><div><span class="font-medium">Hardware escasso e caro</span><span class="text-neutral-500 text-sm ml-2">- A janela de hoje</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-            <div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Memória e GPUs sob pressão de preço e demanda futura (robôs, drones, carros).</p></div>
-            <div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">A urgência é começar enquanto o hardware ainda é obtenível.</p></div>
-            <div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Escassez, janela de oportunidade, começar com o que se tem.</p></div>
-          </div></div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" aria-expanded="false" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
-            <span class="text-lg">🛡️</span><div><span class="font-medium">A saída é a soberania</span><span class="text-neutral-500 text-sm ml-2">- Controle é seu</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-            <div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">A inteligência roda na sua máquina, sob seu controle, e ninguém pode desligar.</p></div>
-            <div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Soberania é o fio condutor de todo o curso.</p></div>
-            <div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Soberania, independência, base própria.</p></div>
-          </div></div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" aria-expanded="false" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
-            <span class="text-lg">🎁</span><div><span class="font-medium">O que você ganha</span><span class="text-neutral-500 text-sm ml-2">- Privado, ilimitado, resiliente</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-            <div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Os três pilares: privacidade, uso ilimitado e não-removível.</p></div>
-            <div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Cada pilar habilita usos impossíveis na nuvem.</p></div>
-            <div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Privacidade, sem pedágio, sempre-on.</p></div>
-          </div></div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" aria-expanded="false" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
-            <span class="text-lg">🧱</span><div><span class="font-medium">Mitos que travam</span><span class="text-neutral-500 text-sm ml-2">- Caro, burro, obsoleto</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-            <div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">As três crenças que param as pessoas — e por que caem no teste.</p></div>
-            <div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Remover a barreira mental é o primeiro passo prático.</p></div>
-            <div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Bom o suficiente, ciclo de hardware, começar grátis.</p></div>
-          </div></div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" aria-expanded="false" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
-            <span class="text-lg">🗺️</span><div><span class="font-medium">Seu mapa no curso</span><span class="text-neutral-500 text-sm ml-2">- As 4 trilhas</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-            <div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Como as trilhas se encadeiam do porquê aos agentes 24/7.</p></div>
-            <div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Saber o caminho mantém você orientado.</p></div>
-            <div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Pré-requisitos, progressão, destino.</p></div>
-          </div></div>
-        </div>
-      </div>
-      <div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
-        <button onclick="openModal('modal-1-1')" class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors">Ver em Modal</button>
-        <a href="modulo-1-1.html" class="px-4 py-2 text-sm bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg transition-colors">Ver Completo</a>
-      </div>
-    </div>
-
-    <!-- MÓDULO 1.2 -->
-    <div id="modulo-1-2" class="bg-dark-800 rounded-xl border border-dark-600 mb-6" style="scroll-margin-top:5rem">
-      <div class="p-6 border-b border-dark-600">
-        <div class="flex items-center justify-between mb-2"><span class="text-emerald-400 font-bold">1.2</span><span class="text-xs text-neutral-500">~30 min</span></div>
-        <h3 class="text-2xl font-bold mb-2">🏠 O que é IA local de verdade</h3>
-        <p class="text-neutral-400 text-sm">Onde o modelo roda, o que é um LLM, e os três pilares na prática.</p>
-      </div>
-      <div class="divide-y divide-dark-600">
-        <div class="topic-item"><button onclick="toggleTopic(this)" aria-expanded="false" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span><span class="text-lg">☁️</span><div><span class="font-medium">Onde o modelo roda: nuvem × local</span><span class="text-neutral-500 text-sm ml-2">- O caminho do prompt</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Na nuvem o prompt viaja a um data center; local tudo acontece na sua GPU/CPU.</p></div><div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">É a diferença que explica privacidade e custo.</p></div><div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Inferência, data center, offline.</p></div></div></div></div>
-        <div class="topic-item"><button onclick="toggleTopic(this)" aria-expanded="false" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span><span class="text-lg">🧠</span><div><span class="font-medium">O que é um LLM, em concreto</span><span class="text-neutral-500 text-sm ml-2">- Pesos + programa</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Um arquivo de pesos + um programa de inferência que gera texto.</p></div><div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Desmistifica o "modelo" e prepara a anatomia (1.4).</p></div><div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Pesos, inferência, tokens.</p></div></div></div></div>
-        <div class="topic-item"><button onclick="toggleTopic(this)" aria-expanded="false" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span><span class="text-lg">🔒</span><div><span class="font-medium">Privacidade real</span><span class="text-neutral-500 text-sm ml-2">- Nada sai da máquina</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Prompts e respostas não vão para servidores de terceiros.</p></div><div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Decisivo para dados sensíveis.</p></div><div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Dados sensíveis, sem logs externos.</p></div></div></div></div>
-        <div class="topic-item"><button onclick="toggleTopic(this)" aria-expanded="false" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span><span class="text-lg">♾️</span><div><span class="font-medium">Ilimitado: sem pedágio</span><span class="text-neutral-500 text-sm ml-2">- Só eletricidade</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Sem custo por token, habilita uso contínuo e batch.</p></div><div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Base econômica dos agentes 24/7.</p></div><div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Sem rate limit, custo marginal baixo.</p></div></div></div></div>
-        <div class="topic-item"><button onclick="toggleTopic(this)" aria-expanded="false" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span><span class="text-lg">🗝️</span><div><span class="font-medium">Não pode ser tirado</span><span class="text-neutral-500 text-sm ml-2">- Sem bloqueio</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Independência de preço, política e região.</p></div><div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Resiliência é parte do valor.</p></div><div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Resiliência, responsabilidade própria.</p></div></div></div></div>
-        <div class="topic-item"><button onclick="toggleTopic(this)" aria-expanded="false" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span><span class="text-lg">⚖️</span><div><span class="font-medium">Quando NÃO usar local</span><span class="text-neutral-500 text-sm ml-2">- Honestidade</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Casos em que nuvem ou híbrido fazem mais sentido.</p></div><div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Decidir com critério, não por dogma.</p></div><div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Híbrido, pico de inteligência, custo-benefício.</p></div></div></div></div>
-      </div>
-      <div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
-        <button onclick="openModal('modal-1-2')" class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors">Ver em Modal</button>
-        <a href="modulo-1-2.html" class="px-4 py-2 text-sm bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg transition-colors">Ver Completo</a>
-      </div>
-    </div>
-
-    <!-- MÓDULO 1.3 -->
-    <div id="modulo-1-3" class="bg-dark-800 rounded-xl border border-dark-600 mb-6" style="scroll-margin-top:5rem">
-      <div class="p-6 border-b border-dark-600">
-        <div class="flex items-center justify-between mb-2"><span class="text-emerald-400 font-bold">1.3</span><span class="text-xs text-neutral-500">~30 min</span></div>
-        <h3 class="text-2xl font-bold mb-2">🐘 Local é mais burro/lento? O elefante na sala</h3>
-        <p class="text-neutral-400 text-sm">A objeção honesta — e por que a distância está caindo rápido.</p>
-      </div>
-      <div class="divide-y divide-dark-600">
-        <div class="topic-item"><button onclick="toggleTopic(this)" aria-expanded="false" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span><span class="text-lg">🙋</span><div><span class="font-medium">A objeção honesta</span><span class="text-neutral-500 text-sm ml-2">- Sim, há um gap</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Hoje muitos modelos locais são mais simples/lentos que o topo da nuvem.</p></div><div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Encarar a verdade evita frustração.</p></div><div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Gap de capacidade, expectativa realista.</p></div></div></div></div>
-        <div class="topic-item"><button onclick="toggleTopic(this)" aria-expanded="false" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span><span class="text-lg">📉</span><div><span class="font-medium">A distância está caindo</span><span class="text-neutral-500 text-sm ml-2">- Bom o suficiente</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Modelos abertos (GLM, Qwen, Llama, DeepSeek) chegando perto do topo.</p></div><div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Para a maioria das tarefas, já basta.</p></div><div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Modelos abertos, convergência.</p></div></div></div></div>
-        <div class="topic-item"><button onclick="toggleTopic(this)" aria-expanded="false" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span><span class="text-lg">🔺</span><div><span class="font-medium">Inteligência × velocidade × custo</span><span class="text-neutral-500 text-sm ml-2">- Escolha 2</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">O triângulo de trade-offs; local muda a economia.</p></div><div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Escolher conscientemente o ponto de equilíbrio.</p></div><div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Trade-off, economia de uso.</p></div></div></div></div>
-        <div class="topic-item"><button onclick="toggleTopic(this)" aria-expanded="false" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span><span class="text-lg">🔄</span><div><span class="font-medium">O ciclo de hardware mudou</span><span class="text-neutral-500 text-sm ml-2">- Eficiência</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Modelos mais eficientes fazem hardware antigo render de novo.</p></div><div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Derruba o medo do "obsoleto em 2 anos".</p></div><div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Eficiência, quantização, longevidade.</p></div></div></div></div>
-        <div class="topic-item"><button onclick="toggleTopic(this)" aria-expanded="false" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span><span class="text-lg">📐</span><div><span class="font-medium">Benchmarks sem se enganar</span><span class="text-neutral-500 text-sm ml-2">- Teste na sua tarefa</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Como ler benchmarks com ceticismo (contaminação, cherry-pick).</p></div><div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Decidir pelo seu caso, não pelo ranking.</p></div><div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Benchmark, contaminação, teste próprio.</p></div></div></div></div>
-        <div class="topic-item"><button onclick="toggleTopic(this)" aria-expanded="false" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span><span class="text-lg">🎚️</span><div><span class="font-medium">Calibrando expectativa</span><span class="text-neutral-500 text-sm ml-2">- Tarefa × viabilidade</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">O que roda ótimo local vs o que ainda pede o topo.</p></div><div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Saber a ferramenta certa para cada tarefa.</p></div><div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Chat, embeddings, classificação, código complexo.</p></div></div></div></div>
-      </div>
-      <div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
-        <button onclick="openModal('modal-1-3')" class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors">Ver em Modal</button>
-        <a href="modulo-1-3.html" class="px-4 py-2 text-sm bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg transition-colors">Ver Completo</a>
-      </div>
-    </div>
-
-    <!-- MÓDULO 1.4 -->
-    <div id="modulo-1-4" class="bg-dark-800 rounded-xl border border-dark-600 mb-6" style="scroll-margin-top:5rem">
-      <div class="p-6 border-b border-dark-600">
-        <div class="flex items-center justify-between mb-2"><span class="text-emerald-400 font-bold">1.4</span><span class="text-xs text-neutral-500">~40 min</span></div>
-        <h3 class="text-2xl font-bold mb-2">🧬 Anatomia de um LLM local</h3>
-        <p class="text-neutral-400 text-sm">Pesos, tokens, contexto, quantização, memória e licenças — sem código.</p>
-      </div>
-      <div class="divide-y divide-dark-600">
-        <div class="topic-item"><button onclick="toggleTopic(this)" aria-expanded="false" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span><span class="text-lg">⚖️</span><div><span class="font-medium">Pesos e parâmetros</span><span class="text-neutral-500 text-sm ml-2">- O que é "7B / 70B"</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Bilhões de parâmetros; mais ≈ mais capaz e mais pesado.</p></div><div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">É o primeiro número que você lê ao escolher um modelo.</p></div><div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Parâmetros, escala, peso em disco.</p></div></div></div></div>
-        <div class="topic-item"><button onclick="toggleTopic(this)" aria-expanded="false" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span><span class="text-lg">🔤</span><div><span class="font-medium">Tokens e janela de contexto</span><span class="text-neutral-500 text-sm ml-2">- Quanto ele lê de uma vez</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Token = pedaço de palavra; contexto = quanto cabe na "memória de trabalho".</p></div><div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Contexto longo custa memória — afeta o que cabe.</p></div><div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Token, contexto, KV cache.</p></div></div></div></div>
-        <div class="topic-item"><button onclick="toggleTopic(this)" aria-expanded="false" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span><span class="text-lg">🗜️</span><div><span class="font-medium">Quantização</span><span class="text-neutral-500 text-sm ml-2">- Caber em menos memória</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Reduzir a precisão dos pesos (FP16→Q4) para caber em menos memória.</p></div><div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">É o que torna o hardware acessível possível.</p></div><div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Precisão, trade-off qualidade × tamanho.</p></div></div></div></div>
-        <div class="topic-item"><button onclick="toggleTopic(this)" aria-expanded="false" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span><span class="text-lg">🧮</span><div><span class="font-medium">Memória manda</span><span class="text-neutral-500 text-sm ml-2">- Regra de bolso</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Estimar VRAM/RAM por tamanho × quantização.</p></div><div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Liga direto à escolha de hardware (Trilha 2).</p></div><div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">VRAM, RAM, overhead de contexto.</p></div></div></div></div>
-        <div class="topic-item"><button onclick="toggleTopic(this)" aria-expanded="false" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span><span class="text-lg">👨‍👩‍👧</span><div><span class="font-medium">Famílias de modelos</span><span class="text-neutral-500 text-sm ml-2">- Llama, Qwen, Gemma…</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">As principais famílias abertas e para que serve cada faixa.</p></div><div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Saber por onde começar a escolher.</p></div><div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Llama, Qwen, Gemma, Mistral, DeepSeek, Phi.</p></div></div></div></div>
-        <div class="topic-item"><button onclick="toggleTopic(this)" aria-expanded="false" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span><span class="text-lg">📜</span><div><span class="font-medium">Licenças importam</span><span class="text-neutral-500 text-sm ml-2">- Aberto ≠ irrestrito</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Diferença entre Apache/MIT e licenças com restrição de uso.</p></div><div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Evita problema em uso comercial.</p></div><div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Licença, uso comercial, checklist.</p></div></div></div></div>
-      </div>
-      <div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
-        <button onclick="openModal('modal-1-4')" class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors">Ver em Modal</button>
-        <a href="modulo-1-4.html" class="px-4 py-2 text-sm bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg transition-colors">Ver Completo</a>
-      </div>
-    </div>
-
-    <!-- NAVEGAÇÃO ENTRE TRILHAS -->
-    <div class="flex flex-col sm:flex-row gap-4 mt-10">
-      <a href="../../index.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">← Início do curso</a>
-      <a href="../trilha2/index.html" class="flex-1 text-center px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-500 transition-colors">Trilha 2: Hardware & Lab →</a>
-    </div>
-  </div>
-  </main>
-
-  <!-- MODAIS -->
-  <div id="modal-1-1" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" onclick="if(event.target===this)closeModal()">
-    <div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600">
-      <div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-emerald-400 font-bold">1.1</span><span class="font-semibold">A virada: por que agora</span></div><button onclick="closeModal()" class="text-neutral-400 hover:text-white text-2xl leading-none">&times;</button></div>
-      <iframe src="modulo-1-1.html" class="flex-1 w-full rounded-b-xl"></iframe>
-    </div>
-  </div>
-  <div id="modal-1-2" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" onclick="if(event.target===this)closeModal()">
-    <div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600">
-      <div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-emerald-400 font-bold">1.2</span><span class="font-semibold">O que é IA local de verdade</span></div><button onclick="closeModal()" class="text-neutral-400 hover:text-white text-2xl leading-none">&times;</button></div>
-      <iframe src="modulo-1-2.html" class="flex-1 w-full rounded-b-xl"></iframe>
-    </div>
-  </div>
-  <div id="modal-1-3" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" onclick="if(event.target===this)closeModal()">
-    <div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600">
-      <div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-emerald-400 font-bold">1.3</span><span class="font-semibold">Local é mais burro/lento?</span></div><button onclick="closeModal()" class="text-neutral-400 hover:text-white text-2xl leading-none">&times;</button></div>
-      <iframe src="modulo-1-3.html" class="flex-1 w-full rounded-b-xl"></iframe>
-    </div>
-  </div>
-  <div id="modal-1-4" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" onclick="if(event.target===this)closeModal()">
-    <div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600">
-      <div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-emerald-400 font-bold">1.4</span><span class="font-semibold">Anatomia de um LLM local</span></div><button onclick="closeModal()" class="text-neutral-400 hover:text-white text-2xl leading-none">&times;</button></div>
-      <iframe src="modulo-1-4.html" class="flex-1 w-full rounded-b-xl"></iframe>
-    </div>
-  </div>
-
-  <footer class="border-t border-dark-600 py-8 mt-8">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
-      <p>IA Local Masterclass · 2026 · <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300">INEMA.CLUB</a></p>
-    </div>
-  </footer>
-
-  <script>
+<link href="https://inematds.github.io/local-ai-masterclass/curso/trilha1/" hreflang="pt-BR" rel="alternate"/><link href="https://inematds.github.io/local-ai-masterclass/en/curso/trilha1/" hreflang="en" rel="alternate"/><link href="https://inematds.github.io/local-ai-masterclass/es/curso/trilha1/" hreflang="es" rel="alternate"/></head>
+<body class="bg-dark-900 text-neutral-100 min-h-screen"><div class="inema-lang" style="position:fixed;right:14px;bottom:14px;z-index:9999;display:flex;gap:2px;padding:4px;border-radius:10px;background:rgba(12,12,16,.82);border:1px solid rgba(226,162,59,.45);font:600 12px/1 Sora,Inter,system-ui,sans-serif;backdrop-filter:blur(8px)" translate="no"><a href="./" hreflang="pt-BR" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#1a1206;background:#E2A23B">PT</a><a href="../../en/curso/trilha1/" hreflang="en" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">EN</a><a href="../../es/curso/trilha1/" hreflang="es" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">ES</a></div>
+<a class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[60] focus:px-4 focus:py-2 focus:bg-dark-800 focus:rounded-lg" href="#conteudo">Pular para o conteúdo</a>
+<nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-14">
+<div class="flex items-center space-x-4">
+<a class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300" href="../../index.html">
+<span class="text-2xl">🖥️</span><span class="font-bold text-lg hidden sm:inline">IA Local Masterclass</span>
+</a>
+<span class="text-neutral-600">|</span>
+<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://inema.club" target="_blank">INEMA.CLUB</a>
+</div>
+<div class="flex items-center space-x-1 sm:space-x-2">
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-emerald-400 bg-emerald-500/10" href="index.html"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentos</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors" href="../trilha2/index.html"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Hardware</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors" href="../trilha3/index.html"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Instalação</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors" href="../trilha4/index.html"><span class="sm:hidden">T4</span><span class="hidden sm:inline">Avançado</span></a>
+<button aria-label="Alternar tema" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2" id="theme-toggle">
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-dark-icon" viewbox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-light-icon" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd"></path></svg>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<main id="conteudo">
+<header class="bg-gradient-to-br from-emerald-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<span class="inline-block px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs font-semibold rounded-full mb-4">TRILHA 1</span>
+<h1 class="text-3xl sm:text-4xl font-bold mb-4">🧭 Fundamentos</h1>
+<p class="text-lg text-neutral-300 max-w-3xl mb-6">Antes de instalar nada, entenda o terreno: por que IA local virou movimento de soberania, o que ela é de verdade, por que o "burro e lento" é cada vez menos verdade, e como um LLM funciona por dentro. É a base que faz o resto fazer sentido.</p>
+<div class="rounded-2xl border border-emerald-500/30 bg-dark-900/40 p-3 sm:p-4 mb-8 overflow-hidden max-w-3xl">
+<svg aria-label="Os quatro módulos de fundamentos formam uma escada: por que, o que é, mitos e anatomia" class="w-full h-auto" role="img" viewbox="0 0 1000 200">
+<defs>
+<lineargradient id="t1h-grad" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#34d399"></stop><stop offset="1" stop-color="#10b981"></stop></lineargradient>
+<filter height="180%" id="t1h-glow" width="180%" x="-40%" y="-40%"><fegaussianblur result="b" stddeviation="1.8"></fegaussianblur><femerge><femergenode in="b"></femergenode><femergenode in="SourceGraphic"></femergenode></femerge></filter>
+<pattern height="32" id="t1h-grid" patternunits="userSpaceOnUse" width="32"><circle cx="1.3" cy="1.3" fill="#10b981" opacity="0.12" r="1.3"></circle></pattern>
+</defs>
+<rect fill="url(#t1h-grid)" height="200" width="1000" x="0" y="0"></rect>
+<path d="M120,150 L880,60" fill="none" opacity="0.5" stroke="#34d399" stroke-dasharray="9 9" stroke-width="1.8"></path>
+<g font-family="Inter,sans-serif" font-size="13" font-weight="600">
+<g><rect fill="#0e2018" height="42" rx="10" stroke="#34d399" stroke-width="2" width="170" x="40" y="130"></rect><text fill="#34d399" text-anchor="middle" x="125" y="156">1.1 Por que agora</text></g>
+<g><rect fill="#0e2018" height="42" rx="10" stroke="#34d399" stroke-width="2" width="170" x="280" y="100"></rect><text fill="#34d399" text-anchor="middle" x="365" y="126">1.2 O que é</text></g>
+<g><rect fill="#0e2018" height="42" rx="10" stroke="#34d399" stroke-width="2" width="170" x="520" y="70"></rect><text fill="#34d399" text-anchor="middle" x="605" y="96">1.3 Burro/lento?</text></g>
+<g filter="url(#t1h-glow)"><rect fill="#0e2018" height="42" rx="10" stroke="url(#t1h-grad)" stroke-width="2.5" width="180" x="760" y="40"></rect><text fill="#34d399" text-anchor="middle" x="850" y="66">1.4 Anatomia</text></g>
+</g>
+</svg>
+</div>
+<div class="grid grid-cols-4 gap-4 max-w-2xl">
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">4</div><div class="text-xs text-neutral-400">Módulos</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">24</div><div class="text-xs text-neutral-400">Tópicos</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">~2h</div><div class="text-xs text-neutral-400">Duração</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">Básico</div><div class="text-xs text-neutral-400">Nível</div></div>
+</div>
+</div>
+</header>
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<!-- MAPA DA TRILHA -->
+<section class="mb-12">
+<h2 class="text-2xl font-bold mb-6">Mapa da trilha</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<a class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-emerald-500/30 p-5 transition-all" href="#modulo-1-1">
+<div class="flex items-center justify-between mb-2"><span class="text-emerald-400 font-bold text-sm">1.1</span><span class="text-xs text-neutral-500">~35 min</span></div>
+<h3 class="font-semibold mb-1 group-hover:text-emerald-400 transition-colors">🌍 A virada</h3>
+<p class="text-xs text-neutral-400">A janela está aberta hoje</p>
+</a>
+<a class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-emerald-500/30 p-5 transition-all" href="#modulo-1-2">
+<div class="flex items-center justify-between mb-2"><span class="text-emerald-400 font-bold text-sm">1.2</span><span class="text-xs text-neutral-500">~30 min</span></div>
+<h3 class="font-semibold mb-1 group-hover:text-emerald-400 transition-colors">🏠 O que é local</h3>
+<p class="text-xs text-neutral-400">Roda na sua máquina</p>
+</a>
+<a class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-emerald-500/30 p-5 transition-all" href="#modulo-1-3">
+<div class="flex items-center justify-between mb-2"><span class="text-emerald-400 font-bold text-sm">1.3</span><span class="text-xs text-neutral-500">~30 min</span></div>
+<h3 class="font-semibold mb-1 group-hover:text-emerald-400 transition-colors">🐘 Burro e lento?</h3>
+<p class="text-xs text-neutral-400">Cada vez menos verdade</p>
+</a>
+<a class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-emerald-500/30 p-5 transition-all" href="#modulo-1-4">
+<div class="flex items-center justify-between mb-2"><span class="text-emerald-400 font-bold text-sm">1.4</span><span class="text-xs text-neutral-500">~40 min</span></div>
+<h3 class="font-semibold mb-1 group-hover:text-emerald-400 transition-colors">🧬 Anatomia do LLM</h3>
+<p class="text-xs text-neutral-400">Pesos, tokens, quantização</p>
+</a>
+</div>
+</section>
+<h2 class="text-2xl font-bold mb-6">Conteúdo detalhado</h2>
+<!-- MÓDULO 1.1 -->
+<div class="bg-dark-800 rounded-xl border border-dark-600 mb-6" id="modulo-1-1" style="scroll-margin-top:5rem">
+<div class="p-6 border-b border-dark-600">
+<div class="flex items-center justify-between mb-2"><span class="text-emerald-400 font-bold">1.1</span><span class="text-xs text-neutral-500">~35 min</span></div>
+<h3 class="text-2xl font-bold mb-2">🌍 A virada: por que agora</h3>
+<p class="text-neutral-400 text-sm">O caso do "porquê": acesso restrito, hardware encarecendo e a soberania como saída.</p>
+</div>
+<div class="divide-y divide-dark-600">
+<div class="topic-item">
+<button aria-expanded="false" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
+<span class="text-lg">📰</span><div><span class="font-medium">O mundo mudou esta semana</span><span class="text-neutral-500 text-sm ml-2">- Acesso vira privilégio</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Os modelos de fronteira chegam primeiro a grupos selecionados, enquanto labs do mundo todo aceleram.</p></div>
+<div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Entender a corrida explica por que depender só da nuvem é arriscado.</p></div>
+<div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Modelo de fronteira, acesso restrito, modelos abertos.</p></div>
+</div></div>
+</div>
+<div class="topic-item">
+<button aria-expanded="false" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
+<span class="text-lg">💸</span><div><span class="font-medium">Hardware escasso e caro</span><span class="text-neutral-500 text-sm ml-2">- A janela de hoje</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Memória e GPUs sob pressão de preço e demanda futura (robôs, drones, carros).</p></div>
+<div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">A urgência é começar enquanto o hardware ainda é obtenível.</p></div>
+<div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Escassez, janela de oportunidade, começar com o que se tem.</p></div>
+</div></div>
+</div>
+<div class="topic-item">
+<button aria-expanded="false" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
+<span class="text-lg">🛡️</span><div><span class="font-medium">A saída é a soberania</span><span class="text-neutral-500 text-sm ml-2">- Controle é seu</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">A inteligência roda na sua máquina, sob seu controle, e ninguém pode desligar.</p></div>
+<div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Soberania é o fio condutor de todo o curso.</p></div>
+<div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Soberania, independência, base própria.</p></div>
+</div></div>
+</div>
+<div class="topic-item">
+<button aria-expanded="false" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
+<span class="text-lg">🎁</span><div><span class="font-medium">O que você ganha</span><span class="text-neutral-500 text-sm ml-2">- Privado, ilimitado, resiliente</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Os três pilares: privacidade, uso ilimitado e não-removível.</p></div>
+<div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Cada pilar habilita usos impossíveis na nuvem.</p></div>
+<div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Privacidade, sem pedágio, sempre-on.</p></div>
+</div></div>
+</div>
+<div class="topic-item">
+<button aria-expanded="false" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
+<span class="text-lg">🧱</span><div><span class="font-medium">Mitos que travam</span><span class="text-neutral-500 text-sm ml-2">- Caro, burro, obsoleto</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">As três crenças que param as pessoas — e por que caem no teste.</p></div>
+<div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Remover a barreira mental é o primeiro passo prático.</p></div>
+<div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Bom o suficiente, ciclo de hardware, começar grátis.</p></div>
+</div></div>
+</div>
+<div class="topic-item">
+<button aria-expanded="false" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
+<span class="text-lg">🗺️</span><div><span class="font-medium">Seu mapa no curso</span><span class="text-neutral-500 text-sm ml-2">- As 4 trilhas</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Como as trilhas se encadeiam do porquê aos agentes 24/7.</p></div>
+<div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Saber o caminho mantém você orientado.</p></div>
+<div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Pré-requisitos, progressão, destino.</p></div>
+</div></div>
+</div>
+</div>
+<div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
+<button class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors" onclick="openModal('modal-1-1')">Ver em Modal</button>
+<a class="px-4 py-2 text-sm bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg transition-colors" href="modulo-1-1.html">Ver Completo</a>
+</div>
+</div>
+<!-- MÓDULO 1.2 -->
+<div class="bg-dark-800 rounded-xl border border-dark-600 mb-6" id="modulo-1-2" style="scroll-margin-top:5rem">
+<div class="p-6 border-b border-dark-600">
+<div class="flex items-center justify-between mb-2"><span class="text-emerald-400 font-bold">1.2</span><span class="text-xs text-neutral-500">~30 min</span></div>
+<h3 class="text-2xl font-bold mb-2">🏠 O que é IA local de verdade</h3>
+<p class="text-neutral-400 text-sm">Onde o modelo roda, o que é um LLM, e os três pilares na prática.</p>
+</div>
+<div class="divide-y divide-dark-600">
+<div class="topic-item"><button aria-expanded="false" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span><span class="text-lg">☁️</span><div><span class="font-medium">Onde o modelo roda: nuvem × local</span><span class="text-neutral-500 text-sm ml-2">- O caminho do prompt</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Na nuvem o prompt viaja a um data center; local tudo acontece na sua GPU/CPU.</p></div><div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">É a diferença que explica privacidade e custo.</p></div><div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Inferência, data center, offline.</p></div></div></div></div>
+<div class="topic-item"><button aria-expanded="false" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span><span class="text-lg">🧠</span><div><span class="font-medium">O que é um LLM, em concreto</span><span class="text-neutral-500 text-sm ml-2">- Pesos + programa</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Um arquivo de pesos + um programa de inferência que gera texto.</p></div><div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Desmistifica o "modelo" e prepara a anatomia (1.4).</p></div><div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Pesos, inferência, tokens.</p></div></div></div></div>
+<div class="topic-item"><button aria-expanded="false" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span><span class="text-lg">🔒</span><div><span class="font-medium">Privacidade real</span><span class="text-neutral-500 text-sm ml-2">- Nada sai da máquina</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Prompts e respostas não vão para servidores de terceiros.</p></div><div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Decisivo para dados sensíveis.</p></div><div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Dados sensíveis, sem logs externos.</p></div></div></div></div>
+<div class="topic-item"><button aria-expanded="false" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span><span class="text-lg">♾️</span><div><span class="font-medium">Ilimitado: sem pedágio</span><span class="text-neutral-500 text-sm ml-2">- Só eletricidade</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Sem custo por token, habilita uso contínuo e batch.</p></div><div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Base econômica dos agentes 24/7.</p></div><div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Sem rate limit, custo marginal baixo.</p></div></div></div></div>
+<div class="topic-item"><button aria-expanded="false" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span><span class="text-lg">🗝️</span><div><span class="font-medium">Não pode ser tirado</span><span class="text-neutral-500 text-sm ml-2">- Sem bloqueio</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Independência de preço, política e região.</p></div><div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Resiliência é parte do valor.</p></div><div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Resiliência, responsabilidade própria.</p></div></div></div></div>
+<div class="topic-item"><button aria-expanded="false" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span><span class="text-lg">⚖️</span><div><span class="font-medium">Quando NÃO usar local</span><span class="text-neutral-500 text-sm ml-2">- Honestidade</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Casos em que nuvem ou híbrido fazem mais sentido.</p></div><div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Decidir com critério, não por dogma.</p></div><div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Híbrido, pico de inteligência, custo-benefício.</p></div></div></div></div>
+</div>
+<div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
+<button class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors" onclick="openModal('modal-1-2')">Ver em Modal</button>
+<a class="px-4 py-2 text-sm bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg transition-colors" href="modulo-1-2.html">Ver Completo</a>
+</div>
+</div>
+<!-- MÓDULO 1.3 -->
+<div class="bg-dark-800 rounded-xl border border-dark-600 mb-6" id="modulo-1-3" style="scroll-margin-top:5rem">
+<div class="p-6 border-b border-dark-600">
+<div class="flex items-center justify-between mb-2"><span class="text-emerald-400 font-bold">1.3</span><span class="text-xs text-neutral-500">~30 min</span></div>
+<h3 class="text-2xl font-bold mb-2">🐘 Local é mais burro/lento? O elefante na sala</h3>
+<p class="text-neutral-400 text-sm">A objeção honesta — e por que a distância está caindo rápido.</p>
+</div>
+<div class="divide-y divide-dark-600">
+<div class="topic-item"><button aria-expanded="false" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span><span class="text-lg">🙋</span><div><span class="font-medium">A objeção honesta</span><span class="text-neutral-500 text-sm ml-2">- Sim, há um gap</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Hoje muitos modelos locais são mais simples/lentos que o topo da nuvem.</p></div><div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Encarar a verdade evita frustração.</p></div><div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Gap de capacidade, expectativa realista.</p></div></div></div></div>
+<div class="topic-item"><button aria-expanded="false" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span><span class="text-lg">📉</span><div><span class="font-medium">A distância está caindo</span><span class="text-neutral-500 text-sm ml-2">- Bom o suficiente</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Modelos abertos (GLM, Qwen, Llama, DeepSeek) chegando perto do topo.</p></div><div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Para a maioria das tarefas, já basta.</p></div><div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Modelos abertos, convergência.</p></div></div></div></div>
+<div class="topic-item"><button aria-expanded="false" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span><span class="text-lg">🔺</span><div><span class="font-medium">Inteligência × velocidade × custo</span><span class="text-neutral-500 text-sm ml-2">- Escolha 2</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">O triângulo de trade-offs; local muda a economia.</p></div><div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Escolher conscientemente o ponto de equilíbrio.</p></div><div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Trade-off, economia de uso.</p></div></div></div></div>
+<div class="topic-item"><button aria-expanded="false" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span><span class="text-lg">🔄</span><div><span class="font-medium">O ciclo de hardware mudou</span><span class="text-neutral-500 text-sm ml-2">- Eficiência</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Modelos mais eficientes fazem hardware antigo render de novo.</p></div><div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Derruba o medo do "obsoleto em 2 anos".</p></div><div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Eficiência, quantização, longevidade.</p></div></div></div></div>
+<div class="topic-item"><button aria-expanded="false" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span><span class="text-lg">📐</span><div><span class="font-medium">Benchmarks sem se enganar</span><span class="text-neutral-500 text-sm ml-2">- Teste na sua tarefa</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Como ler benchmarks com ceticismo (contaminação, cherry-pick).</p></div><div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Decidir pelo seu caso, não pelo ranking.</p></div><div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Benchmark, contaminação, teste próprio.</p></div></div></div></div>
+<div class="topic-item"><button aria-expanded="false" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span><span class="text-lg">🎚️</span><div><span class="font-medium">Calibrando expectativa</span><span class="text-neutral-500 text-sm ml-2">- Tarefa × viabilidade</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">O que roda ótimo local vs o que ainda pede o topo.</p></div><div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Saber a ferramenta certa para cada tarefa.</p></div><div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Chat, embeddings, classificação, código complexo.</p></div></div></div></div>
+</div>
+<div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
+<button class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors" onclick="openModal('modal-1-3')">Ver em Modal</button>
+<a class="px-4 py-2 text-sm bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg transition-colors" href="modulo-1-3.html">Ver Completo</a>
+</div>
+</div>
+<!-- MÓDULO 1.4 -->
+<div class="bg-dark-800 rounded-xl border border-dark-600 mb-6" id="modulo-1-4" style="scroll-margin-top:5rem">
+<div class="p-6 border-b border-dark-600">
+<div class="flex items-center justify-between mb-2"><span class="text-emerald-400 font-bold">1.4</span><span class="text-xs text-neutral-500">~40 min</span></div>
+<h3 class="text-2xl font-bold mb-2">🧬 Anatomia de um LLM local</h3>
+<p class="text-neutral-400 text-sm">Pesos, tokens, contexto, quantização, memória e licenças — sem código.</p>
+</div>
+<div class="divide-y divide-dark-600">
+<div class="topic-item"><button aria-expanded="false" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span><span class="text-lg">⚖️</span><div><span class="font-medium">Pesos e parâmetros</span><span class="text-neutral-500 text-sm ml-2">- O que é "7B / 70B"</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Bilhões de parâmetros; mais ≈ mais capaz e mais pesado.</p></div><div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">É o primeiro número que você lê ao escolher um modelo.</p></div><div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Parâmetros, escala, peso em disco.</p></div></div></div></div>
+<div class="topic-item"><button aria-expanded="false" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span><span class="text-lg">🔤</span><div><span class="font-medium">Tokens e janela de contexto</span><span class="text-neutral-500 text-sm ml-2">- Quanto ele lê de uma vez</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Token = pedaço de palavra; contexto = quanto cabe na "memória de trabalho".</p></div><div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Contexto longo custa memória — afeta o que cabe.</p></div><div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Token, contexto, KV cache.</p></div></div></div></div>
+<div class="topic-item"><button aria-expanded="false" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span><span class="text-lg">🗜️</span><div><span class="font-medium">Quantização</span><span class="text-neutral-500 text-sm ml-2">- Caber em menos memória</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Reduzir a precisão dos pesos (FP16→Q4) para caber em menos memória.</p></div><div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">É o que torna o hardware acessível possível.</p></div><div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Precisão, trade-off qualidade × tamanho.</p></div></div></div></div>
+<div class="topic-item"><button aria-expanded="false" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span><span class="text-lg">🧮</span><div><span class="font-medium">Memória manda</span><span class="text-neutral-500 text-sm ml-2">- Regra de bolso</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Estimar VRAM/RAM por tamanho × quantização.</p></div><div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Liga direto à escolha de hardware (Trilha 2).</p></div><div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">VRAM, RAM, overhead de contexto.</p></div></div></div></div>
+<div class="topic-item"><button aria-expanded="false" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span><span class="text-lg">👨‍👩‍👧</span><div><span class="font-medium">Famílias de modelos</span><span class="text-neutral-500 text-sm ml-2">- Llama, Qwen, Gemma…</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">As principais famílias abertas e para que serve cada faixa.</p></div><div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Saber por onde começar a escolher.</p></div><div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Llama, Qwen, Gemma, Mistral, DeepSeek, Phi.</p></div></div></div></div>
+<div class="topic-item"><button aria-expanded="false" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span><span class="text-lg">📜</span><div><span class="font-medium">Licenças importam</span><span class="text-neutral-500 text-sm ml-2">- Aberto ≠ irrestrito</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Diferença entre Apache/MIT e licenças com restrição de uso.</p></div><div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Evita problema em uso comercial.</p></div><div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Licença, uso comercial, checklist.</p></div></div></div></div>
+</div>
+<div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
+<button class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors" onclick="openModal('modal-1-4')">Ver em Modal</button>
+<a class="px-4 py-2 text-sm bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg transition-colors" href="modulo-1-4.html">Ver Completo</a>
+</div>
+</div>
+<!-- NAVEGAÇÃO ENTRE TRILHAS -->
+<div class="flex flex-col sm:flex-row gap-4 mt-10">
+<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="../../index.html">← Início do curso</a>
+<a class="flex-1 text-center px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-500 transition-colors" href="../trilha2/index.html">Trilha 2: Hardware &amp; Lab →</a>
+</div>
+</div>
+</main>
+<!-- MODAIS -->
+<div class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" id="modal-1-1" onclick="if(event.target===this)closeModal()">
+<div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600">
+<div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-emerald-400 font-bold">1.1</span><span class="font-semibold">A virada: por que agora</span></div><button class="text-neutral-400 hover:text-white text-2xl leading-none" onclick="closeModal()">×</button></div>
+<iframe class="flex-1 w-full rounded-b-xl" src="modulo-1-1.html"></iframe>
+</div>
+</div>
+<div class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" id="modal-1-2" onclick="if(event.target===this)closeModal()">
+<div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600">
+<div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-emerald-400 font-bold">1.2</span><span class="font-semibold">O que é IA local de verdade</span></div><button class="text-neutral-400 hover:text-white text-2xl leading-none" onclick="closeModal()">×</button></div>
+<iframe class="flex-1 w-full rounded-b-xl" src="modulo-1-2.html"></iframe>
+</div>
+</div>
+<div class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" id="modal-1-3" onclick="if(event.target===this)closeModal()">
+<div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600">
+<div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-emerald-400 font-bold">1.3</span><span class="font-semibold">Local é mais burro/lento?</span></div><button class="text-neutral-400 hover:text-white text-2xl leading-none" onclick="closeModal()">×</button></div>
+<iframe class="flex-1 w-full rounded-b-xl" src="modulo-1-3.html"></iframe>
+</div>
+</div>
+<div class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" id="modal-1-4" onclick="if(event.target===this)closeModal()">
+<div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600">
+<div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-emerald-400 font-bold">1.4</span><span class="font-semibold">Anatomia de um LLM local</span></div><button class="text-neutral-400 hover:text-white text-2xl leading-none" onclick="closeModal()">×</button></div>
+<iframe class="flex-1 w-full rounded-b-xl" src="modulo-1-4.html"></iframe>
+</div>
+</div>
+<footer class="border-t border-dark-600 py-8 mt-8">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
+<p>IA Local Masterclass · 2026 · <a class="text-sky-400 hover:text-sky-300" href="https://inema.club" target="_blank">INEMA.CLUB</a></p>
+</div>
+</footer>
+<script>
     function toggleTopic(button){const t=button.closest('.topic-item');const e=t.querySelector('.topic-explanation');const c=button.closest('.bg-dark-800');if(c){c.querySelectorAll('.topic-explanation.active').forEach(x=>{if(x!==e)x.classList.remove('active')})}e.classList.toggle('active');const ex=e.classList.contains('active');button.setAttribute('aria-expanded',ex?'true':'false')}
     const themeToggle=document.getElementById('theme-toggle');const di=document.getElementById('theme-toggle-dark-icon');const li=document.getElementById('theme-toggle-light-icon');const root=document.documentElement;
     function syncIcons(){if(root.classList.contains('dark')){li.classList.remove('hidden');di.classList.add('hidden')}else{di.classList.remove('hidden');li.classList.add('hidden')}}
@@ -406,7 +387,7 @@
     function closeModal(){document.querySelectorAll('.modal').forEach(m=>m.classList.add('hidden'));document.body.style.overflow='auto'}
     document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
   </script>
-  <script src="../../assets/learn.js"></script>
-  <script>document.addEventListener('DOMContentLoaded',function(){if(window.INEMA&&typeof INEMA.init==='function')INEMA.init();});</script>
+<script src="../../assets/learn.js"></script>
+<script>document.addEventListener('DOMContentLoaded',function(){if(window.INEMA&&typeof INEMA.init==='function')INEMA.init();});</script>
 </body>
 </html>
